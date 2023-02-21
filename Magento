@@ -1,0 +1,23 @@
+Magento is open-source using php scripting language on zend framework. 
+
+(Zend Framework: - Zend is an open-source php framework. It is completly object oriented and built aroun the MVC (Model Control View) design pattern. I
+It conatins collection of php packages which can be used develop web applications and services.)
+
+Magento was first developed by varien in 2007. The current version and latest version of magento is 2.3 which was deeloped in 2019.
+
+Some of the ecommerce websites that use magento are shopify, woocommerce, 3dcart, opencart etc. beacause: -
+
+     => Magento is free and fully extensible.
+     => Sellers have ownership and full access to hosting services.
+* It covers all the merchant s requirements: B2C, B2B global expansion, omnichannel or digital transportation.
+
+* Each version of mogento includes two editions one community edition (CE) and Enterprise edition (EE) so- called open-source and commerce. While Magento
+CE is entirely free to download  with all the basics features for small business purporse and Magento is EE is paid about $22,000 per year for the 2.2x 
+version.
+
+Magento 2 Community edition is open-source.
+Magento 2 Enterprise edition is commerece.
+
+*** Magento 2 EE pricing = Revenue * Magento License cost * percentage. ***
+ 
+Above is the formula for the magento enterprise edition  
