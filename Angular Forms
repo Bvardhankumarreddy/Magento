@@ -1,0 +1,56 @@
+There are three types of binding:- 1) Interpolation, Eventbinding, property binding
+
+1) Interpolation Binding
+
+=> This binding is used to return HTML output from Typescript code i.e. from components to the views. Here the template expression is specified within double curly braces. Through interpolation, strings can be added into the text that is present between HTML element tags and within attribute assignments. These strings are calculated using Template expressions.
+
+Example: -
+
+=> HTML File
+
+<h1>{{title}}</h1>
+Learn <b> {{Course}} </b> with edureka.
+
+2 * 2 = {{2 * 2 }}
+<div><img src="{{image}}"></div>
+
+=> TS file 
+
+export class AppComponent {
+  title = 'Databinding';
+  course ='Angular';
+  image = 'paste the url here'
+}
+
+
+2) Property Binding
+
+
+
+ 
+ 
+
+
+Three Directives ngModel, ngForm and ngSubmit.
+
+
+---> ngModel
+1) ngMOdel is a two way binding in angular js which helps to transparently keep in sync a form with a view model.
+
+2) Forms built with this directive could be tested in an end to end test because this requires the presence of DOM (Document Object Model).
+
+** The logical structure of documents and documents are accessed and manipulated are defined using DOM elements. It defines event methods, properties for      all HTML elements as objects.
+
+** DOM acts as an API in Angular JS.
+
+** ng-disabled, ng-show, ng-click , ng-hide are the some DOM derictives used to bind the application data.
+
+** The one-way binding in angular bind the data from the component to the view (DOM) or vice-versa - from view to the component.
+
+** The two-way binding in angular is used to display information to the end user and allows the end user to make changes to the underlying data using UI.
+
+3)ngModel allows to build Template Driven Forms.
+
+
+
+
