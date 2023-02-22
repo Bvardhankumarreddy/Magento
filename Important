@@ -3,4 +3,53 @@ Amazon uses Java, C++, Perl and Python. Upcoming Node.js and GO.
 AEM -> Adobe Experience Manager.
 
 Fastest server side scripting languages: -
-1)
+1) Javascript
+2) PHP
+3) Ruby
+4) Python
+5) Java
+6) Rust
+7) Solidity
+8) GO
+9) Kotlin
+10) Node JS
+
+
+   WebSite ------------------   Front-End (Client-Side) ------------------- Backend (Server Side) ------------------- Databases
+
+1. Google.                      Javascript,Typescript                       C++, Java, Python, GO,                    Bigtable, MariaDB
+                                                                            C, Node, PHP.                        
+                                                                            
+                                                                            
+2. Facebook                     Javascript,Typescript, Flow                 Hack,PHP (HHVM),Python,C++               MariaDB, MySQL, HBase, Cassandra
+                                                                            Java,Erlang,D,XHP,Haskell   
+                                                                            
+3. YouTue                       Javasript, Typescript.                       Pyhton, C, C++, Java, GO                Vitess, BigTable, MariaDB
+
+4. Yahoo.                       Javascript, HTML.                            PHP                                      PostgreSQL, HBase, Cassandra, MongoDB
+
+5. Esty                         Javascript                                   PHP                                      MySQL, Redis 
+
+6. Amazon.                      Javascript                                   Java, C++,Perl.                          DynamoDb,RDS/Aurora, Redshift
+
+7. Wikipedia                    Javascript.                                  PHP.                                     MariaDB
+
+8. Fandom.                      Javascript.                                  PHP                                      MySQL
+
+9. Twitter.                     Javascript                                   C++,Java,Scala, Ruby                     MySQl
+                                                                             (Ruby on Rails)
+
+10. eBay                        Javascript, HTML                             Javascript, Java, Scala                  Oracle Database
+
+11. MSN                         Javascript                                   C# (ASP.NET)                             Microsoft, SQL Server
+
+12. LinkedIn                    Javascript                                   Java, Javascript, Scala                  Venice
+
+13. Pinterest                   Javascript                                   Python (Django), Erlang,                 MySQL, Rendis
+                                                                             Elixir      
+
+14. WordPress.com              Javascript                                     PHP                                     MariaDB
+
+15. Netflix                    Javascript                                     Python, Java                            NMDB, PostgreSQL
+                                                                                                 
+                                                                             
