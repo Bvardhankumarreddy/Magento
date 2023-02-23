@@ -68,8 +68,87 @@ ongoing market trends in-depth. The ease of integration with back-end systems an
 The vast user base of Magento makes it a platform that offers prompt assistance.
  
  
+Video 1: -
+Magento Website has: - 
+
+1) Dashboard
+2)Sales ->All transaction can be seen.
+3) Catalog -> where the products are been added to the list or removing or updating is done based on the division and category.
+4) Customers -> We can see the all the customers and items that are been added by customers into their cart.
+5) Marketing -> Is used to make the promotions while users open the website or while checkout. We can also see the newsletters like how many people 
+have subscribed to the website and we can send the email updates about their orders. We can also for what the users are looking for while they are
+browsing in the site.
+6) Content -> It is used to design the pages, widgets and blocks of the websites. 
+7) Reports -> It provides the report of the all sales, orders, number of users, products etc that are throught out certain period of time.
+8) Stores -> It helps to the product configuration, store configuration , user configuration that we needed.
  
  
+Video 2:-
+Manging the categories of the producst by using catlog option provided.
+We are going to manage the sales report, sample data, export data, viewing report, refund reports, abandoned cart report, average cart report,
+popular products report.
+
+Video 3: -
+How to process orders & credit memos/refunds.
+
+In sales menu we can see all the information related to a products. What an customer is been adding. The total cost of the products of what customer has
+purhased. The delivery details of the product to which location. We can amount to refubded to the customer after the cancellation of the products.
+
+Video 4: -
+
+Manging Admin and Users
+
+We can go to systems option shown below to add any new employee or admin or we can also add the users.
+For employee or admin we can give access to the particular category or we can access to the multiple categories at the same time and save the role.
+
+Video 5: -
+
+Viewing Reports by clicking on reports section.
+
+Sales Report:- We can get the complete sales report of order updated or order created. We can also select period whether the orders created within a day,
+month or year. After selecting we can duration (FROM - TO). Order status etc. We can data after selecting the options needed. 
+
+We can also see the product report  order by the customers and product reviews report given by the customers. We also have abndoned cart, order total 
+cart, Best Sellers Report
+
+Video 6: -
+
+Overview of Customer Management
+
+Opening the customer section
+
+We can view all the details of the customers by opening this section. We can create reorder the products for the customer. We see the wishlist of the
+customers. We can change the shipping address as they needed. We can give comments on their orders.
+
+Video 7: -
+
+Create Manual Magento 2 Backups
+
+
+Systems => Tools => Backups
+
+Types of Backup: -
+
+1) System Backup
+2) Database and Media Backup
+3) Database Backup
+
+Backup's can be done on regular intervals.
+
+
+After select the backup we needed. We should give a name to the backup and click procced. Then we can the data of the creation of backup. Along with that 
+an zip file will be created. We could also download it or roll back it.
+
+Video 8: -
+
+Manage Customer reviews
+
+When we go the marketing section we can see the reviews given by the customers as well as we can generate some reviews as users from the backend.
+
+
+
+
+
 * It covers all the merchant s requirements: B2C, B2B global expansion, omnichannel or digital transportation.
 
 * Each version of mogento includes two editions one community edition (CE) and Enterprise edition (EE) so- called open-source and commerce. While Magento
