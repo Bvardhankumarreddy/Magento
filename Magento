@@ -144,6 +144,10 @@ Video 8: -
 Manage Customer reviews
 
 When we go the marketing section we can see the reviews given by the customers as well as we can generate some reviews as users from the backend.
+And then the review will be approved by the admin and then the review is displayed in the UI that seen by the user.
+
+We can go to the stores section and we can select the types of reviews that customers are going to give
+
 
 
 
