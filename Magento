@@ -149,6 +149,101 @@ And then the review will be approved by the admin and then the review is display
 We can go to the stores section and we can select the types of reviews that customers are going to give
 
 
+video 9:-
+
+Manage Store (Website, store and store views)
+
+How to manage the new stores?
+
+Video 10: -
+
+Transactional Email Setup
+
+Go to -> Marketing (Section) -> Email Templates -> Add new template 
+
+Load default template where you need to use the template.(E.g new account, payment details, order details etc)
+
+then save template. The template also can be previewed before configuring it.
+
+To configure -> stores -> configuration -> customers -> customer configuration. Select the deflaut template to created template.
+
+
+
+Video 11: -
+
+Backend Search Terms Synonyms and Optimization
+
+
+Go to -> Marketing -> search terms -> Add New search term 
+
+Now we can add the new search and give link to the particular word.
+
+and we can add that to the search synonym. so if searched word is similar to the word mentioned then link gets open related to that.
+
+
+Video 37:-
+
+Two Factor Authentication for Admin and User login
+
+Providing more security to the account by adding multiple login features.
+
+Go to -> Stores -> Configuration -> Security ->2FA
+
+Video 38:-
+
+Backend Free of Charge Orders (?)
+
+To allow free of charge first go to 
+
+Stores -> Configurations -> Sales -> Payment Methods -> Zero Subtotal Checkout
+
+Go to -> Sales -> Orders ->Create a new order (Select the store from you have given free of shippping cost) -> Choose the product
+
+Video 39:-
+
+Open source vs Commerece & How to choose
+
+Video 40:-
+
+Video 41:-
+
+Customer Password Strength (Validations)
+
+Go to -> Stores -> Configuration -> Customers-> Customer Configuration ->Pasword Options -> Change based on requirements (Password Length,
+No.of uppercase and Lowercase letters) and save it
+
+Video 42:-
+
+Login as Customer
+
+Logging into the customer account in their behakf without knowing their password to slove the problems in their account.
+E.g. Browsing a product or ordering a product etc.
+
+First to login as customer enable the extension.
+
+For that Go to -> Stores ->Configuration -> Customers -> Login as customer
+
+After unabling 
+
+Go to -> Customers (Section) -> All customers -> Select the customer that you want login as -> Click on the edit option so that it redirects you
+
+you to the next page -> Select login as customer ( After that we can products to that particular customer, Change the shipping addresss etc).
+
+
+
+Video 43:- (Need to know more)
+
+Changing Layout per page
+
+Go to -> Catalog -> Categories -> Select the category in which you want to change the design -> Design option
+
+Video 44:-
+
+Google Analytics Enhanced Ecommerce with Magento 2 open source /w GTM
+
+How to install and setup enhanced Ecommerce on Google Universal Analytics using an extension with Google Tag Manager (GTM) and Data Layer
+
+Video 45:-
 
 
 
