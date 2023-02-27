@@ -181,6 +181,105 @@ Now we can add the new search and give link to the particular word.
 and we can add that to the search synonym. so if searched word is similar to the word mentioned then link gets open related to that.
 
 
+Video 12: -
+
+How to manage promotions -> cart, cupons and catalog price rules
+
+Catalog Prie Rules
+
+Go to -> Marketing -> Catalog Price Rule -> Add New Rule
+
+make promotions whether discount or price off on the products while buying. We will be giving a name to that paticular rule and selecting the from to 
+till date and selecting the offer is applicable for either wholesalers, or retailers or all of them.
+Under the conditions section select the category that you wanted to give offer.
+
+
+Cart Rules
+
+Go to -> Marketing -> Cart Price Rule -> New Cart Rule
+
+Giving offers for by making some cupon codes. It may be to one or more than one based on the value given in User Per Cupon. And also Uses Per Customer 
+whether a customer can use once or more than one time. From to Till date. Giving condition so that to whom it is applicable and making the cupon active.
+
+We can also auto generate the cupons by clicking on the Manage Coupon codes and the number f quantity we wanted. so that the coupons are automatically 
+generated.
+
+Video 13:-
+
+Setup Meta Robots Tags and Robots.txt (Search Engine Robots)
+
+Go to -> Stores -> Configuration -> General -> Design
+
+Default Robots -> Index,Follow
+
+robot.txt ===> Didn't Understand
+
+Video 14:-
+
+Notifications Overview
+
+Go to -> Settings -> Notifications 
+
+Video 15:-
+
+Sitemap Setup (Need more Clarity)
+
+Sitemap => 
+A sitemap is a file where you provide information about the pages, videos, and other files on your site, and the relationships between them. 
+Search engines like Google read this file to crawl your site more efficiently.
+
+Go to -> Marketing -> SEO search (Site map) -> Add Site Map
+
+Go to -> stores -> Configuration -> Catalog -> XML sitemap
+
+Video 16:-
+
+Mangement of CMS/ Content Pages
+
+Go to --> Content --> Pages --> Add New Page (If want to make changes select the page make edits )
+
+
+Making page about some podcut to give detail information about it. or Page not found page etc.
+
+Video 17:-
+
+Customer Groups
+
+Go to -> Stores -> Custome Groups  -> Add New Customer Group
+
+Based on the need gorup all the customers into different categories like Newly Registered customers in group, 
+Customers with more number of orders in one group.
+
+Go to -> Customers -> Edit the add group that you needed.
+
+Video 18:-
+
+Locked Users -> If a user logins mulyiple times with inavlid login details the user will be locked.
+Go to -> Stores -> Configuration -> Customer Configuration
+Go to -> Settings -> Locked Users (To check number of locked users)
+
+Minimum Login failures  to lockout the account. and time also can be given for how long the account will be locked.
+
+Video 19:-
+
+Install Google Analytics on Magento 2
+
+Go to -> Stores -> Configuration -> Sales -> Google API -> Google Analtics.
+ To see numbers of users are active on the website or number of users have logged in and browsing for a product etc.
+ 
+Video 20:-
+
+Introduction to Magento Product Types
+
+1) Simple Products 
+2) Configurable Products
+3) Grouped Product
+4) Virtual Product
+5) Bundle Product
+6) Downloadable Product
+7) Gift Card
+
+
 Video 37:-
 
 Two Factor Authentication for Admin and User login
