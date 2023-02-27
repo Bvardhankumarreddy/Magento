@@ -92,7 +92,7 @@ Video 3: -
 How to process orders & credit memos/refunds.
 
 In sales menu we can see all the information related to a products. What an customer is been adding. The total cost of the products of what customer has
-purhased. The delivery details of the product to which location. We can amount to refubded to the customer after the cancellation of the products.
+purhased. The delivery details of the product to which location. We can amount to refunded to the customer after the cancellation of the products.
 
 Video 4: -
 
@@ -279,6 +279,22 @@ Introduction to Magento Product Types
 6) Downloadable Product
 7) Gift Card
 
+Video 21: -
+
+Manage Products
+
+Magento unables two types of products they are downloadable products and Bundled products (Physical Products).
+
+Simple Product is a product that has one set of inventorynote no real variations.that differ from inventory standpont.
+
+A configurable Product is the set of many simple products. Having all the information about the product in one page (E.g. Color of Product, Quantity 
+of product, Sizes of the product)
+
+Video 22:- (Need To watch again)
+
+Product Attributes and Product Attributes Templates
+
+Go to -> Stores -> Product Template
 
 Video 37:-
 
