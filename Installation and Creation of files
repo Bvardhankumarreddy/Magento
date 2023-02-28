@@ -1,0 +1,252 @@
+Installation Process
+
+Prequistes: -
+1. Install MAMP
+2. Use php version 7.4.21 in MAMP
+3. Make the user an admin in the user and groups section in Mac and restart the device
+
+
+1. Install Brew 
+
+Homebrew is a free and opensource software package management system that simplifies the installation of software on Apple's operating system, macos 
+as well as linux. The name is inteded to suggest the idea of building software on the Mac depending on the user's taste. Orginally written by Max Howell,
+the package manager has gained popularity in the Ruby on Rails community and earned praise for its extensibility. Homebrew has been recomended for its ease
+of use as well as its integration into the command line interface.
+
+Homebrew has made extensive use of github to expand the support of several packages through user contributions. In 2010 Homebrew as the third-most forked 
+repositiry on github. In 2012, Homebrew had the largest number of new contributors on Github. In 2013, Homebrew had both the largest number contributors
+and issues closed of any project on github.
+
+Homebrew has spaned several sub-projects such as Linuxbrew, a linux port now officially merged into Homebrew; Homebrew cask, which builds upon Homebrew and
+focuses on the installation of GUI applications; and "taps" dedicated to specific areas or programming languages like PHP.
+
+Developer : Max Howell
+Type : Package Manager
+Operating System : macOS, Linux
+WrittenIN : Ruby
+
+More information related to installation: - https://brew.sh/
+PROCESS TO INSTALL BREW
+
+1. Open terminal
+2. And paste below link in the terminal:-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+---------------------------------
+If facing problem to install brew that may be beacuse of developer tools may not be installed in your OS:-
+
+COMMAND TO INSTALL DEVELOPER TOOLS: - xcode-select --install
+---------------------------------
+
+After installing brew type the brew --version or brew doctor so that you coud know brew installed succesfully.
+
+----------------------------------
+sometimes brew may not be detected due to software update or OS update
+
+For that type below command: - 
+
+source .profile (press enter)
+
+----------------------------------
+
+2. Install ELASTICSEARCH (Search Engine) 
+
+Link more information of installation:- https://www.elastic.co/guide/en/elasticsearch/reference/7.17/brew.html
+
+ElasticSearch is a search based on the lucene library. It provides a distributed, multitenant-capable full-text search engine with a HTTP wen interface,
+It is commonly is used for log analytics, full text-search, security Intelligence, business analytics and operational intelligent use cases.
+and schema-free JSON documents. Elastic is developed in JAVA and is dual licensed under the source avaliable server side public license and the elastic 
+license, while other parts fall under proprietary Elastic License. Official clients are avaliable i JAVA, PHP, .Net, Python, Ruby and many other languages.
+According to DB-Engines ranking. Elasticsearch is the most popular enterprise searh engine. Completely open source and built with Java, Elasticsearch is
+a NoSQL database. That means it stores data in an unstructured way and that you cannot use SQL to query it.
+
+Developers: - Elastic NV
+Written in:-  Java
+
+PROCESS TO INSTALL ELASTICSEARCH 
+
+1) Open the Terminal
+2)Run the below commands :- i)brew tap elastic/tap
+                            ii) brew install elastic/tap/elasticsearch-full
+                           iii) brew services start elasticsearch-full
+                           
+Then go to browser and then type localhost:9200 (Go to http://localhost:9200/ or 127.0.0.1:9200/ to check that elastic search is
+working properly. It should display a JSON object if working properly.
+).
+After opening the server page will show the information has shown below
+-----------------------------------------------
+{
+  "name" : "L-GKJD9C19WW.local",
+  "cluster_name" : "elasticsearch",
+  "cluster_uuid" : "6IYbj1tVR0CEKz3GyN9sFQ",
+  "version" : {
+    "number" : "7.17.0",
+    "build_flavor" : "default",
+    "build_type" : "tar",
+    "build_hash" : "bee86328705acaa9a6daede7140defd4d9ec56bd",
+    "build_date" : "2022-01-28T08:36:04.875279988Z",
+    "build_snapshot" : false,
+    "lucene_version" : "8.11.1",
+    "minimum_wire_compatibility_version" : "6.8.0",
+    "minimum_index_compatibility_version" : "6.0.0-beta1"
+  },
+  "tagline" : "You Know, for Search"
+}
+----------------------------------------------
+                           
+                       OR ELSE 
+You can download the elasticsearch file from internet source 
+link => https://www.elastic.co/downloads/elasticsearch)
+
+1. download the folder from the above provided link.
+2. Place the folder in htdocs and Unzip it.
+3. After Unzip you can see some folders and files as well inside it the magento folder (Like: - bin,config, data etc)
+4. Then open BIN folder and oepn the first file in the terminal. (File named: - elasticsearch)
+5. Then go to browser and then type localhost:9200 (Go to http://localhost:9200/ or 127.0.0.1:9200/ to check that elastic search is
+working properly. It should display a JSON object if working properly.
+).
+
+After opening the server page will show the information has shown below
+-----------------------------------------------
+{
+  "name" : "L-GKJD9C19WW.local",
+  "cluster_name" : "elasticsearch",
+  "cluster_uuid" : "6IYbj1tVR0CEKz3GyN9sFQ",
+  "version" : {
+    "number" : "7.17.0",
+    "build_flavor" : "default",
+    "build_type" : "tar",
+    "build_hash" : "bee86328705acaa9a6daede7140defd4d9ec56bd",
+    "build_date" : "2022-01-28T08:36:04.875279988Z",
+    "build_snapshot" : false,
+    "lucene_version" : "8.11.1",
+    "minimum_wire_compatibility_version" : "6.8.0",
+    "minimum_index_compatibility_version" : "6.0.0-beta1"
+  },
+  "tagline" : "You Know, for Search"
+}
+----------------------------------------------
+
+
+3. Install Composer
+
+Composer is a application-level dependency manager for the PHP programming language that provides a standard format for managing dependencies of PHP
+software and required libararies. It was developed by Nils Adermann and Jordi Boggiano, who continues to manage the project. Composer is strongly 
+inspired by Node.js "npm" and Ruby "bundler". The project's dependency sloving algorithm started out as a PHP-based port of openSUSE's libzypp
+satsolver. Composer is not a package manager in the samesense as a Yum or Apt are. Yes, it deals with "packages" or libraries, but it manages them
+on a per-project basis, installing them in a directory (e.g vendor) inside your project.
+
+
+
+composer runs the command line and installs dependencies for an application. It also allows users to install PHP applications that are avaliable on 
+"Packagist" which is its main repository conatining avaliable packages.It also provides autoload capabilities for libariries that specify autoload
+information to ease usage of third-party code.
+
+=> require: add the library in parameter to the file composer.json, and install it.
+=> install: install all libraries from composer.json. It's the command to use to download all PHP repository dependencies.
+=> update: update all libraries from composer.json, according to the allowed versions mentioned into it.
+=> remove: uninstall a library and remove it from composer.json.
+
+
+Composer:
+
+Enables you to declare the libraries you depend on.
+Finds out which versions of which packages can and need to be installed, and installs them (meaning it downloads them into your project).
+You can update all your dependencies in one command.
+
+https://getcomposer.org/doc/00-intro.md Open the following link to download the
+composer setup file: https://getcomposer.org/installer
+
+PROCESS TO INSTALL
+
+1) php composer-setup.php --install-dir=bin --filename=composer
+
+Check composer installation by typing:
+composer -v
+
+or 
+
+1) brew install composer
+
+
+4. Set PHP Path
+
+open terminal and type the following command: -
+
+nano ~/.bash_profile
+
+Put the following code inside and save:
+
+PATH="/Applications/MAMP/bin/php/php7.4.21/bin:$PATH”
+
+==> To edit the path press i
+==> To come out of edit press esc to get back from editing options
+
+then press command+qw if this not work command+wq (Any one of these command may work)
+
+5. Download Magento
+
+Download Magento from either github or the official website
+Move the folder under htdocs and rename it to whatever you want
+We have renamed it to for this installation
+
+link to downlaod magento => https://magefan.com/blog/download-magento-245-zip-archive
+
+Install composer In magento root folder
+
+Move to magento root folder in terminal and type:  command => composer install
+
+Give yes to all permissions in terminal
+
+
+Move files from pub to root folder
+
+Move the .htaccess and index.php file from pub to the root magento folder Edit line 12 in index.php in magento root: From
+
+require __DIR__ . '/../app/bootstrap.php';
+To
+require __DIR__ . '/app/bootstrap.php';
+
+
+Setup magento database
+
+Go to phpMyAdmin and create a new database called magento2
+
+Final magento installation command
+
+Edit the following command in terminal according to your credentials to setup magento2: - 
+
+php -d memory_limit=2G  bin/magento setup:install --base-url=http://localhost:8888/magento2 
+--db-host=localhost:8889 --db-name=magento2 --db-user=root --db-password=root --admin-firstname=vardhan 
+--admin-lastname=kumar --admin-email=bhopathivardhan654321@gmail.com --admin-user=admin --admin-password=admin123 --language=en_US 
+--currency=USD --timezone=America/Chicago --use-rewrites=1 --search-engine=elasticsearch7 --elasticsearch-host=localhost --elasticsearch-port=9200
+
+
+Copy and save the admin link that is displayed for later use
+
+
+
+Final SQL Queries
+
+Go to phpMyAdmin, navigate to the magento2 database and execute the following sql:
+
+
+INSERT INTO `core_config_data` (`config_id`, `scope`, `scope_id`, `path`, `value`,
+`updated_at`) VALUES (NULL, 'default', '0', 'web/secure/base_static_url',
+'http://localhost:8888/magento2/pub/static/', current_timestamp());
+INSERT INTO `core_config_data` (`config_id`, `scope`, `scope_id`, `path`, `value`,
+`updated_at`) VALUES (NULL, 'default', '0', 'web/unsecure/base_static_url',
+'http://localhost:8888/magento2/pub/static/', current_timestamp());
+INSERT INTO `core_config_data` (`config_id`, `scope`, `scope_id`, `path`, `value`,
+`updated_at`) VALUES (NULL, 'default', '0', 'web/secure/base_media_url',
+'http://localhost:8888/magento2/pub/media/', current_timestamp());
+INSERT INTO `core_config_data` (`config_id`, `scope`, `scope_id`, `path`, `value`,
+`updated_at`) VALUES (NULL, 'default', '0', 'web/unsecure/base_media_url',
+'http://localhost:8888/magento2/pub/media/', current_timestamp());
+
+
+Now clear cache using:
+ php bin/magento cache:flush
+ 
+ Installation Done
+    Navigate to http://localhost:8888/magento2/ to go to the magento home page
+    Navigate to http://localhost:8888/magento2/ to go to the admin page
