@@ -32,3 +32,56 @@ foreach ($this->_routerList as $router) {
 }
 
 If there is an action of controller class found, execute() method will be run.
+
+File Structure inside the Module
+
+Module
+1)Block
+2)Controllers
+3)etc
+     a)adminhtml
+               i)menu.xml
+               ii)routes.xml
+               iii)system.xml
+     b)frontend
+               i)routes.xml
+     c)acl.xml (ACL -> Access Control List)
+     d)config.xml
+     e)di.xml
+     f)module.xml
+     g)events.xml
+4)View
+      a)layout
+      b)template
+           file.phtml
+5)Helper
+6)i18n
+7)Model
+8)Setup
+9)view
+10)Plugin
+11)composer.json
+12)registration.php
+
+
+Composer.json => Composer the ability to install this module, its dependency and another meta data.
+ 
+     dependency => A dependency is an additional code that a programmer wants to call.
+
+Registration.php => this file registers the module with magento
+
+Block => It contains php view classes as part of MVC.
+
+Controller => It contains php controller classes as part of MVC
+
+etc => It contains configuration files like as module.xml, menu.xml, system.xml, routes.xml, events.xml etc
+
+etc/module.xml => This file specifies the name and setup version of this module, as well as dependency
+
+etc/acl.xml => The acl.xml file defines the access control list (ACL) for a given module. It defines the avaliable set of permissions to access the
+               resources.
+               
+etc/config.xml => It's system configuration
+
+etc/di.xml  => The di.xml file configures whih dependencies to inject by the object manager. Each module can have a global and area-specific 
+     
