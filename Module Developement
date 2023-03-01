@@ -1,0 +1,34 @@
+In Magento 2, modules will be live in app/code directory of a Magento installation, with this format: app/code/<Vendor>/<ModuleName>.
+
+Module:- The module is a directory that contains blocks, controllers, models, helper, etc - that are related to a specific business feature. 
+The etc folder contains admin ACL, admin menu, configuration. 
+
+Vendor:- The vendor can provide all information about the store, as well as design the profile page by adding their logo, banner, etc. 
+Product creation and promo options. Allow your vendors to create any type of product: configurable, bundle, grouped, simple, downloadable, and virtual.
+
+Controller specially is one of the important thing in Module development series, and PHP MVC Framework in general. It functionarity is that received 
+request, process and render page.
+
+In Magento 2 Controller has one or more files in Controller folder of module, it includes actions of class which contain execute() method. There are 2 
+different controllers, they are frontend controller and backend controller. They are generally similar of workflow, but admin controller is a little
+different. There is a checking permission method in admin controller, it calls form key.
+
+
+How Controller works?
+
+It receive an request from end-user (browser or comamnd line), for example: http://example.com/route_name/controller/action
+
+=> route_name is a unique name which is set in routes.xml.
+=> controller is the folder inside Controller folder.
+=> action is a class with execute method to process request.
+
+One of the important in Magento system is frontController (Magento\Framework\App\FrontController), it alway receives request then route controller, 
+action by route_name Let’s take an example of routing an request:
+
+foreach ($this->_routerList as $router) {
+   try {
+      $actionInstance = $router->match($request);
+   …
+}
+
+If there is an action of controller class found, execute() method will be run.
