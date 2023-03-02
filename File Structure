@@ -117,4 +117,12 @@ Where is the custom module present?
 
 => If you install module by composer then module goes to "vendor/vendorName/ModuleName"
 => If you install module by manual upload to "app/code/vendoname/modulename"
+
+
+www.inchoomagento2.net/frontName/action path/action class/
+
+
  
+frontName – it’s set in routes.xml configuration, and has unique value which will be matched by router
+action path – folder name inside Controller folder, default is index
+action class – our action class which we call Controller, default is index
