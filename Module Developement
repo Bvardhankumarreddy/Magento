@@ -50,23 +50,24 @@ Module
      e)di.xml
      f)module.xml
      g)events.xml
-4)View
-      a)layout
-      b)template
+     
+4)Helper
+5)i18n
+6)Model
+7)Setup
+8)view
+       a)layout
+       b)template
            file.phtml
-5)Helper
-6)i18n
-7)Model
-8)Setup
-9)view
-10)Plugin
-11)composer.json
-12)registration.php
+9)Plugin
+10)composer.json
+11)registration.php
 
 
 Composer.json => Composer the ability to install this module, its dependency and another meta data.
  
-     dependency => A dependency is an additional code that a programmer wants to call.
+     dependency => A dependency is an additional code that a programmer wants to call.Adding a dependency avoids repeating work already done: designing, 
+                   writing, testing, debugging, and maintaining a specific unit of code.
 
 Registration.php => this file registers the module with magento
 
@@ -83,5 +84,37 @@ etc/acl.xml => The acl.xml file defines the access control list (ACL) for a give
                
 etc/config.xml => It's system configuration
 
-etc/di.xml  => The di.xml file configures whih dependencies to inject by the object manager. Each module can have a global and area-specific 
+etc/di.xml  => The di.xml file configures whih dependencies to inject by the object manager. Each module can have a global and area-specific di.xml file.
+
+etc/events.xml => Your unique event name is referenced in your module's events.xml where you
+
+etc/adminhtml/menu.xml => This xml files adds new menu items to the magento admin
+
+etc/adminhtml/routes.xml =>  The contents of this xml file tells Magento to route requests that use the frontName of this module.
+
+etc/adminhtml/system.xml => This is a sconfiguration file which is used to create configuration fields in 2 system configuration
+
+i18n => It contains localization files
+
+Model => It contains PHP model classes as part of MVC
+
+Setup => It contains classes for module database structure and data setup which are invoked when installing or upgrading.
+
+View => It contains view files, including static view files, design templates, email templates and layout files.
+
+Plugin => It contains plugin class. A class that modifies the behavior of original, public methods for any class or interface.
+
+Helper => The helper class conatains the methods. Methods can be called from any template, file, block, model, controller class or even from another
+helper.
+
+Required Files (While creation of a module)
+
+=> registration.php
+=> etc/module.xml
+=> composer.json
+
+Where is the custom module present?
+
+=> If you install module by composer then module goes to "vendor/vendorName/ModuleName"
+=> If you install module by manual upload to "app/code/vendoname/modulename"
      
