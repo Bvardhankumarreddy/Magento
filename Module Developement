@@ -117,4 +117,4 @@ Where is the custom module present?
 
 => If you install module by composer then module goes to "vendor/vendorName/ModuleName"
 => If you install module by manual upload to "app/code/vendoname/modulename"
-     
+ 
