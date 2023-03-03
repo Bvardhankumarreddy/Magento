@@ -1,0 +1,108 @@
+File Structure
+
+=> Section (Vendor) 
+
+===> News (Module)
+
+1) Controller
+        i) Adminhtml
+                   a)AllNews
+                           i)Index.php
+                    
+2) etc
+      i)adminhtml
+                 a)menu.xml
+                 b)routes.xml
+       ii)module.xml
+3)view
+      i)adminhtml
+                a)layout
+                       1)news_allnews_index.xml (modulename_controllername_actionname.xml)
+                b)templates
+                       1) allnews.phtml
+4)composer.json
+5)registration.php
+
+Codes: -
+
+                1)Index.php
+
+                <?php
+                namespace Section\News\Controller\Adminhtml\AllNews;
+                class Index extends \Magento\Backend\App\Action
+                {
+                  protected $resultPageFactory;
+
+                  public function __construct(
+                    \Magento\Backend\App\Action\Context $context,
+                    \Magento\Framework\View\Result\PageFactory $resultPageFactory
+                  ) {
+                    parent::__construct($context);
+                    $this->resultPageFactory = $resultPageFactory;
+                  }
+
+                  public function execute()
+                  {
+                    $resultPage = $this->resultPageFactory->create();
+
+                    return $resultPage;
+                  }
+                }
+                ?>
+                
+Controller
+
+Controller is a class located in module Controller folder, responsible for specific Url or group of Url’s. For every action we have one controller class
+with execute method. Execute method is called when router matches controller action class, and it’s responsible for returning response to front
+controller. All controllers are extending \Magento\Framework\App\Action\Action class which has dispatch method which will call execute method in 
+controller, but we’ll cover flow later. There are two controller types: frontend and admin. They have similar behavior but admin has additional methods 
+for permission checks. 
+Controllers are structured in a specific way so they can be matched. Url structure for matching is:
+
+www.inchoomagento2.net/frontName/action path/action class/
+
+==> frontName – it’s set in routes.xml configuration, and has unique value which will be matched by router
+==> action path – folder name inside Controller folder, default is index
+==> action class – our action class which we call Controller, default is index
+
+Execute Method
+
+This method is “first” called controller action class and it is inherited from \Magento\Framework\App\Action\Action which every controller class extends.
+It’s called by \Magento\Framework\App\Action\Action::dispatch() method. In this method we should have all of our controllers logic (we can, of course, 
+have logic in additional methods, but execute method will call them) and it will return response (mostly rendered page).
+
+\Magento\Framework\App\Action\Action
+
+This is main Magento framework action class and every controller must extend this class (admin controllers are extending \Magento\Backend\App\Action 
+which extends \Magento\Framework\App\Action\Action). It’s important that every controller extends this class to inherit needed methods and to allow 
+front controller to call dispatch method (which will call execute method).
+
+Dispatch
+
+This method will be called first by Front Controller (Magento\Framework\App\FrontController)
+
+Magento\Framework\App\FrontController::dispatch() – calling dispatch in our Action class:
+
+$result = $actionInstance->dispatch($request);
+
+It’s important to understand that dispatch method in our Action class is used for front controllers. For admin controllers dispatch method is rewritten 
+(in \Magento\Backend\App\Action), so it can check is user allowed to access.
+
+
+As we can see, our dispatch method will return results or response from context. It will check if request is dispatched and than call execute method in 
+controller action class which extends \Magento\Framework\App\Action\Action:
+
+$result = $this→execute();
+
+There are two more important methods that we will need in our action classes: _forward and _redirect. 
+
+Forward Method
+
+This protected method will transfer control to another action controller, controller path and module. This is not redirect and it will run one more 
+router loop to pass control to another controller action.
+
+Redirect Method
+
+It will redirect user on new Url by setting response headers and redirect url.
+
+
