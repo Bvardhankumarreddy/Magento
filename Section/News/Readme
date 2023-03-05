@@ -54,7 +54,7 @@ Controller
 
 Controller is a class located in module Controller folder, responsible for specific Url or group of Url’s. For every action we have one controller class
 with execute method. Execute method is called when router matches controller action class, and it’s responsible for returning response to front
-controller. All controllers are extending \Magento\Framework\App\Action\Action class which has dispatch method which will call execute method in 
+controller. All controllers are extending " \Magento\Framework\App\Action\Action " class which has dispatch method which will call execute method in 
 controller, but we’ll cover flow later. There are two controller types: frontend and admin. They have similar behavior but admin has additional methods 
 for permission checks. 
 Controllers are structured in a specific way so they can be matched. Url structure for matching is:
@@ -105,4 +105,35 @@ Redirect Method
 
 It will redirect user on new Url by setting response headers and redirect url.
 
+Controller action match flow ===> FrontController::dispatch() → Router::match() → Controller::dispatch() -> Controller::execute()
+
+Frontcontroller::dispatch()
+
+Code; -
+
+while (!$request->isDispatched() && $routingCycleCounter++ < 100) {
+            /** @var \Magento\Framework\App\RouterInterface $router */
+            foreach ($this->_routerList as $router) {
+                try {
+                    $actionInstance = $router->match($request);
+                    }
+                    
+It will first match router, as you can see in the above code and router match will return action class (\Magento\Framework\App\ActioNFactory) instance.
+After that frontcontroller will dispatch method on action class instance:
+
+$result  = $actioninstance -> dispatch($request);
+
+The dispatch will call the action class execute method: -
+
+This how application flow gets in our action class execute method.
+
+Difference between admin controller and frontend controller 
+
+1) One of the main difference between these two controllers is additional check and additional methods in admin controller. 
+
+Both controller eventually extend \Magento\Framework\App\Action\Action class, but admin controller extend \Magento\Backend\App\Action which extends 
+
+Magento\Framework\App\Action\Action.
+
+2) In admin controller dispatch, rewrite and redirect methods are rewritten to provide logic for checking ACL (Access Control List) 
 
