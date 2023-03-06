@@ -1,0 +1,17 @@
+The folder structure in magento is important for different reasons.
+
+1. It helps to organize the different files and resiurces of the magento application, making it easier to find and maintain them.
+2. It allows the magento application to function properly by providing a clear separation of responsibilities and a hierarchy of files and structures.
+3. It helps to ensure that the magento application can be extended and customized easily by allowing developers to add new code and resoures in the 
+appropriate locations.
+4. It helps to improve the security and stability of the magento application by keeping sensitive files and resources separate from publicly accessible ones.
+
+Magento Directory Structure 
+
+The directory structure of magento consists of three types:-
+
+1) Basic Structure
+2) Module Structure
+3) Design Structure
+
+Magento Folder structure
