@@ -15,3 +15,68 @@ The directory structure of magento consists of three types:-
 3) Design Structure
 
 Magento Folder structure
+
+=> app
+=> bin
+=> div
+=> generated
+=> lib
+=>phpserver
+=> pub
+=>setup
+=>var
+=>vendor
+->auth.json.sample
+->CHANGELOG.md
+->composer.json
+->composer.lock
+->COPYING.txt
+->grunt-config.json.sample
+->Gruntfile.js.sample
+->LICENSE.txt
+->LICENSE_AFL.txt
+->nginx.coinf.sample
+-> package.json.sample
+->SECURITY.md
+->.editorconfig
+->.gitignore
+->.htaccess
+-> .htaccess.sample
+->.php-cs-fixer.dist.php
+-> .user.ini
+
+/RootDirectory
+
+app – This folder contains the core files of Magento 2, including configuration, modules, and themes files.
+By default, the Magento repository’s basic installation contains three main folders, i.e., design, etc., and i18n. The code folder is missing, but all 
+the custom code development and third-party integration modules are in the app/code with the directory app/code/VendorName//ModuleName.
+
+Store custom design theme structure is under the app/design/frontend subdirectory, and the admin theme is under the app/design/adminhtml subdirectory.
+
+To store language packages, the app/i18n directory is your need to help you create a multi-language store.
+
+Besides, to avoid custom modules being mixed with the core modules of Magento, you need to add all Magento core modules in the vendor directory. This is
+because, unlike in Magento 1 version,  where all their Magento core modules had to be committed to their Git repository, with Magento 2, these two are 
+separated.
+
+
+bin: It contains the Magento 2 CLI executable script feature. Using CLI would require SSH access to the server. The Magento 2 CLI can help install 
+modules, upgrade the application core, reindex, compile, etc.
+
+dev: This contains various developer tools, such as Magento Test Framework (MTF) for functional test units.
+
+generated:  This includes two subdirectories code and metadata with all the Magento 2 generated code of all the injected classes. 
+The command can remove it: rm -r <magento_root>/generated/*/* to re-generate the nonfactory classes by the composer.
+
+lib: This directory contains libraries packed separately from the Magento 2 core libraries.
+
+phpserver: This folder contains the Router.php file, the functional unit of the php Built-in web server. However, working on this file for a security 
+breach is strongly recommended.
+
+pub: Stores the file index.php and all generated static files and site media. It should be set as your web root on the server side. As the name says, 
+it contains all the publicly accessible files.
+
+setup: Several important packages, such as the performance toolkit, database scripts, and installation setup, are available in this setup directory.
+
+var: The var folder contains raw sessions, cache, database backups, and cached error reports. This regenerates the contents of numerous subdirectories 
+when running the command bin/magento setup:di:compile.
