@@ -1,6 +1,6 @@
 The folder structure in magento is important for different reasons.
 
-1. It helps to organize the different files and resiurces of the magento application, making it easier to find and maintain them.
+1. It helps to organize the different files and reso urces of the magento application, making it easier to find and maintain them.
 2. It allows the magento application to function properly by providing a clear separation of responsibilities and a hierarchy of files and structures.
 3. It helps to ensure that the magento application can be extended and customized easily by allowing developers to add new code and resoures in the 
 appropriate locations.
@@ -80,3 +80,41 @@ setup: Several important packages, such as the performance toolkit, database scr
 
 var: The var folder contains raw sessions, cache, database backups, and cached error reports. This regenerates the contents of numerous subdirectories 
 when running the command bin/magento setup:di:compile.
+
+  ==> var/log: This stores Magento log files are mostly exception.log, debug, and system.log files.
+  ==> var/view_preprocessed:
+  ==> var/cache: contains all of Magento's cache. You are recommended to use the php bin/magento cache:clean command to clear your cache to see your 
+  developement changes.
+
+Vendor: The composer generated the vendor directory using the composer.json file. This folder includes various packages that have been defined 
+under the composer.json file.
+
+----------------- Module File Structure ---------------------
+Api
+Block
+Controller
+Cron
+etc
+Helper
+i18n
+Mail
+Model
+Setup
+Ui
+view
+=>composer.json
+=>LISCENSE.txt
+=>module.xml
+=>README.md
+=>registration.php
+
+Common Module Directories
+
+=> Block: This contains all PHP view classes with no html code as part of module logic Model View Controller (MVC) vertical implementation.
+=>Controller: It includes all PHP controller classes for receiving requests to the page as part of module logic MVC framework vertical implementation.
+=>etc: Includes configuration files, especially the module.xml, which is required for the basic module.
+=> Model: Includes PHP model classes as part of module logic MVC vertical implementation.
+=>Setup: Includes classes for module database structure and data setup. These data are invoked when installing or upgrading the database.
+
+
+
