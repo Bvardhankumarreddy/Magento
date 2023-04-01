@@ -2,4 +2,33 @@ Error 1:-
 
 Missing required argument $eventPrefix of Sales\Menu\Model\ResourceModel\Dropdowns\Grid\Collection
 
+Error 2: - 
 
+
+Class does not exists
+
+This error occurs when because the filename doesn't match with the class name.
+
+Example:- Filename is :- Dropdowns.php
+
+
+<?php
+
+
+namespace Sales\Menu\Model\ResourceModel;
+
+use Magento\Framework\Model\ResourceModel\Db\AbstractDb;
+
+class Label extends AbstractDb
+{
+    /**
+     * Define main table
+     */
+    protected function _construct()
+    {
+        $this->_init('refund_request_dropdown_options', 'id');
+    }
+}
+
+You can see the line number 22 that the file name is not matching with class you created. So, please cross the check filename and class name when you 
+get these type of error.
