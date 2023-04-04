@@ -32,3 +32,10 @@ class Label extends AbstractDb
 
 You can see the line number 22 that the file name is not matching with class you created. So, please cross the check filename and class name when you 
 get these type of error.
+
+
+Error 2: -
+ 
+Continuous loading of the page or data. Taking longtie to load the page or table and not getting loaded.
+
+
