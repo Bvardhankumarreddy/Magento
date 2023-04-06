@@ -1,0 +1,46 @@
+1.To make changes or upgrade or setup new module or database 
+
+==> php bin/magento setup:upgrade
+
+Note : -If you face memory limit error you can use
+
+php -d memory_limit=5g bin/magento setup:upgrade.
+
+2. To enable the module 
+
+==> php bin/magento module:enable vendorname_modulename
+
+3. To disbale the module
+
+==> php bin/magento module:disable vendorname_modulename 
+
+4. To check the module status
+
+==> php bin/magento module:status
+
+5. To 
+
+Code to enable and disable Magento's log
+
+Enable 
+==>php bin/magento setup:config:set --enable-debug-logging=true
+==>php bin/magento cache:flush
+
+Disable
+==>php bin/magento setup:config:set --enable-debug-logging=false
+=>php bin/magento cache:flush
+
+Code to enable and disable database logging
+
+==>php bin/magento dev:query-log:enable
+==>php bin/magento dev:query-log:disable
+
+code to enable and disable syslog
+
+Enable
+==>php bin/magento setup:config:set --enable-syslog-logging=true
+==>bin/magento cache:flush
+
+Disbale
+==>php bin/magento setup:config:set --enable-syslog-logging=false
+==>php bin/magento cache:flush
