@@ -178,3 +178,42 @@ Ans)
 On the Magento 2 platform, di.xml allows towo sort of nodes: node type and node virtual type, with the virtual type being regarded as a perfect method 
 rather than a type. Virtual types are similar to types, but they offer more flexibility by allowing you to define a virtual class.
 
+Q15) What is the difference Mage::getModel() and Mage::getSingletone() ?
+
+Ans)
+==> Magento creates a new object with Mage::getModel()
+==> Mage::getSingletone() checks for the existence of the object first, and if it doesn't, it produces new one.
+
+Q16) Explain in brief about codepool in magento?
+
+Ans)
+The concept of codepool is to pull code in a magento organized format. It's specified in app/etc/modules/Company Module.xml when you register for new
+module.
+Magento has three codepools: core, community and local, all of which are located in the app/code/directory.
+
+Q17) What are some of the benfits of using Connect Patches in Magento?
+
+Ans) 
+
+Connect Patches have the following advantages in magento:
+
+1) Allowing for quick installation and the overwriting of any existing translations at the same time.
+2) To improve security, Magento connect downloads Magneto 2 extensions through HTTP rather than FTP by default.
+3) Allowing extension developers to create new extensions with a dash character in the name to make it easier for them to do so.
+4) Anytime attempting to install an extension with insufficient file system access will now be notified by magento administrators.
+
+Q18) Is it possible to control all billing information through Magento?
+
+Ans) 
+
+You can accomplish the following things with your magento account as a client:
+
+1) You have the option to change your billing address.
+2) A credit card can be added.
+3) Your billing history can be viewed.
+4) You can link a payapal account to your account.
+5) You can create receipt that is ready to print.
+
+Q19) How do I alter the magento core API settings?
+
+
