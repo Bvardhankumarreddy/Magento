@@ -150,4 +150,31 @@ etc.
 
 6) Downloadable Product:- It's term of internet software. Powerpoint presentations, MP3 files, servers and etc.
 
-Q12) What are different types of sessions? What are the benifits of using 
+Q12) What are different types of sessions? What are the benifits of using different sessions in magento?
+
+Ans)
+
+There are three different distinct sessions:-
+
+1) Core senssion
+2) Customer session
+3) Checkout session
+
+All these sessions are saved in single session. We utilize different sessions because there are occasions when we only a need a portion of a sessions
+data rather than on entire sessions data.
+
+Q13) What RMA stands for in magento?
+
+Ans)
+
+RMA stands for Return Merchandise Authorization. Which buyers to return, repair, or replace products they have previously purchased in excahnge for a 
+refund or credit. Each store return policy will be different, but each will provide customers with thorough information regarding the valid time and 
+circumstances for returning items. As a result, RMA will follow the policy to help clients complete their requests effectively.
+
+Q14) Exaplin in breif virtual type magento?
+
+Ans)
+
+On the Magento 2 platform, di.xml allows towo sort of nodes: node type and node virtual type, with the virtual type being regarded as a perfect method 
+rather than a type. Virtual types are similar to types, but they offer more flexibility by allowing you to define a virtual class.
+
