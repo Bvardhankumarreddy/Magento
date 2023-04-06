@@ -114,7 +114,7 @@ Magento is one of the most popular e-commerce platforms avalibale.
 The major drawback of the magento is it needs exessive amount of storage and memory. It also necessitates object-oriented programming to avoid becoming 
 a complicated system. Furthermore, Magento has the potential to slow down and degrage the speed of your website. 
 
-9)What are the different versions avalibale in magento?
+Q9)What are the different versions avalibale in magento?
 
 Ans) Magento is the platform that offers wide range of items. They have been divided apart depending on a variety of options: 
 
@@ -127,9 +127,27 @@ Ans) Magento is the platform that offers wide range of items. They have been div
 Magento 2.4 is the latest version give wide range of features. It offers new features and enhancements such as the B2B modle, Elastic Search, Adobe Senesi-
 pwered product recommendations, Adobe stack integration and more. 
 
-10) What is the technology stack used by magento?
+Q10) What is the technology stack used by magento?
 
 Ans) 
 
 Magento makes use of the MySQL or MariaDB databases, the PHP programming language, and Zend framework components. PHP 7.0.2 and 7.0.10 is used in magento 2.
 
+Q11) What are different magento product types?
+
+Ans)
+
+1) Simple Product:- It's utilized for a single item that doesn't have any selectable options. For instance, a pen, a copy and so on.
+
+2) Grouped Products:- It's used in conjuction with a simple a product. Example a pen and a copy.
+
+3) Configurable Products:- It's a single item with a few different few options to choose from. From a example a pen comes in variety of colors.
+
+4) Virutal Product:- It is used represent a un-touhable virtual thing. For instance insurance, reservations, etc.
+
+5) Bundle Product:- It's a generic term for collection of simple products. Example a laptop has multiple components such as processor, hardrive , RAM and 
+etc.
+
+6) Downloadable Product:- It's term of internet software. Powerpoint presentations, MP3 files, servers and etc.
+
+Q12) What are different types of sessions? What are the benifits of using 
