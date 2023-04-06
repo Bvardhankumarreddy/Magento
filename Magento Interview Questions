@@ -1,0 +1,36 @@
+
+SKU => Stock keeping Unit
+PLP => Product Listing Page
+ORM => Object Relational Mapping
+
+Q1) Describe various deploy modes in magento?
+
+Ans) There are four possible deployment modes
+ 
+1) Default Mode : - You may install magento 2 apps on a single server using this option. This mode however is not suitable for production.
+
+2) Developer mode: - It is used when you to change or enhance the functionality of the website.
+
+3) Production : - when your magneto site is in production, this option is activated.
+
+4) Maintence: - When you enable this mode, you will be unable to access the magento website while it is being updated or reconfigured.
+
+
+Note: - The below command is used to check the production mode of magento.
+
+php bin/magento deploy:mode:show
+
+Q2) What are magento magic methods? 
+
+Ans)
+1) __get()
+2) __set()
+3) __call()
+4) __tostring()
+5) __has()
+6) __isset()
+7) __construct()
+8) __uns()
+
+
+Q3) 
