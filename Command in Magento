@@ -56,7 +56,7 @@ Disable
 ==>php bin/magento setup:config:set --enable-debug-logging=false
 =>php bin/magento cache:flush
 
-9. Code to enable and disable database logging
+9. Code to enable and disable database query logging
 
 ==>php bin/magento dev:query-log:enable
 ==>php bin/magento dev:query-log:disable
@@ -77,5 +77,183 @@ Disbale
 
 Use the [-c|--clear-static-content] option to clear static content. This is necessary if you previously enabled or disabled modules and you must clear 
 the static content previously generated for them.
+
+
+12. To list all the commands in magento
+
+==> php bin/magento list
+
+13. Displays help for a command
+
+==> help
+
+14. To create an adminstrator
+
+==> php bin/magento admin:user:create (php bin/magento a:u:c )
+
+15. To unlock admin account
+
+==> php bin/magento admin:user:unlock
+
+16. Create dump application 
+
+==> php bin/magento app:config:dump
+
+17. Import data from shared configuration files to apporiate data storage
+
+==> php bin/magento app:config:import
+
+18. Disable cache types
+
+==> php bin/magento cache:disable
+
+19. Enable cache types
+
+==> php bin/magento cache:enable
+
+20. Check cache status
+
+==> php bin/magento cache:status
+
+
+-------- Catalog ---------
+
+21. Create resized product images
+
+==>php bin/magento catalog:images:resize (php bin/magento c:i:r)
+
+22. To remove unused product attributes
+
+==> php bin/magento catalog:product:attributes:cleanup (php bin/magento c:p:a:c)
+
+
+-------------- config-----------
+
+23. Set sensitive configuration values
+
+==> php bin/magento config:sensitive:set 
+
+24. To change system configuration
+
+==> php bin/magento config:set
+
+25. Show configuration values for given path. If path is not specified, all saved values will be shown
+
+==> php bin/magento config:show
+
+---------- cron -----------------
+
+26. Generates and installs crontab for current user
+
+==> php bin/magento cron:install
+
+27. Removes tasks from crontab
+
+==> php bin/magento cron:remove
+
+28. Run jobs by schedule
+
+==> php bin/magento cron:run (php bin/magento c:r)
+
+------------Customer ---------
+
+29. Upgrade customer's hash according to the latest alogirtm 
+
+==> php bin/magento customer:\hash:upgrade (php bin/magento c:h:u)
+
+-----------deploy--------------
+
+30. Set application mode
+
+==> php bin/magento deploy:mode:Set
+
+31. Displays current application mode
+
+==> php bin/magento deploy:mode:show
+
+--------------dev--------------
+
+32. Provides the information on dependency injection configuration for the command
+
+==> php bin/magento dev:di:info
+
+33. collects and publishes source files for theme.
+
+==> php bin/magento dev:source-theme:deploy (php bin/magento d:s:d)
+
+34. Enable frontend template hints. A cache flush might be required
+
+==> php bin/magento dev:template-hints:enable
+
+35. Disable frontend template hints. A cache flush might be required
+
+==> php bin/magento dev:template-hints:disable
+
+36. Run Tests
+
+==> php bin/magento dev:tests:run
+
+37. Generates the catalog of URNs to *.xsd mappings for the IDE to highlight xml.
+
+==> php bin/magento dev:urn-catalog:generate (php bin/magento d:u:g)
+
+38. Converts XML files using XSL style sheets
+
+==> php bin/magento dev:xml:convert (php bin/magento d:x:c)
+
+--------------i18n-------------
+
+39. Discovers phrases in the codebase
+
+==> php bin/magento i18n:collect-phrases (php bin/magento i1:c)
+
+40. Saves languages packages
+
+==> php bin/magento i18n:pack (php bin/magento i:p)
+
+41. Uninstalls language packages
+
+==> php bin/magento i18n:uninstall (php bin/magento i:u)
+
+---------- Indexer ----------
+
+42. Shows allowed indexers
+
+==> php bin/magento indexer:info
+
+43. Reindexes Data
+
+==> php bin/magento indexer:reindex (php bin/magento i:rei)
+
+44. Resets indexer status to invalid
+
+==> php bin/magento indexer:reset (php bin/magento i:res)
+
+45. Sets index mode type
+
+==> php bin/magento indexer:set-mode (php bin/magento i:set)
+
+46. Show index mode
+
+==> php bin/magento indexer:show-mode (php bin/magento i:sho)
+
+47. Show status of the indexer
+
+==> php bin/magento indexer:status (php bin/magento i:sta)
+
+--------------- info -----------------------
+
+48. Displays the magento admin url
+
+==> php bin/magento info:adminuri
+
+49. Prints list of backup files
+
+==> php bin/magento info:backups:list (php bin/magento i:b:l)
+
+50. 
+
+
+
 
 
