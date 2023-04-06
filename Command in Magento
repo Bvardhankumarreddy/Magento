@@ -18,9 +18,35 @@ php -d memory_limit=5g bin/magento setup:upgrade.
 
 ==> php bin/magento module:status
 
-5. To 
+5. Code Compilation
 
-Code to enable and disable Magento's log
+uses of the code compilation command
+1) Application code generation(factories, proxies)
+2) Area configuration aggregation (optimized dependency injection configurations per area)
+3) Interceptor generation (Optimized code generation of interceptors)
+4) Interception cache generation.
+5) Repositories code generation (generated code for api's)
+6) Service data attributes generation (generated extension classes for data objects)
+
+==>php bin/magento setup:di:compile
+
+di => dependency Injection.
+Generated code and dependency injection configuration successfully.
+
+6. To deploy the code in magento 
+
+==> php bin/magento setup:static:content-deploy
+
+7. To clear the cache
+
+==> php bin/magento cache:clear
+
+8. To flush the cache
+
+==> php bin/magento cache:flush
+
+
+8. Code to enable and disable Magento's log
 
 Enable 
 ==>php bin/magento setup:config:set --enable-debug-logging=true
@@ -30,12 +56,12 @@ Disable
 ==>php bin/magento setup:config:set --enable-debug-logging=false
 =>php bin/magento cache:flush
 
-Code to enable and disable database logging
+9. Code to enable and disable database logging
 
 ==>php bin/magento dev:query-log:enable
 ==>php bin/magento dev:query-log:disable
 
-code to enable and disable syslog
+10.code to enable and disable syslog
 
 Enable
 ==>php bin/magento setup:config:set --enable-syslog-logging=true
@@ -44,3 +70,12 @@ Enable
 Disbale
 ==>php bin/magento setup:config:set --enable-syslog-logging=false
 ==>php bin/magento cache:flush
+
+11. To compile the code before installing the commerece application
+
+==>php bin/magento module:enable --all [-c|--clear-static-content]
+
+Use the [-c|--clear-static-content] option to clear static content. This is necessary if you previously enabled or disabled modules and you must clear 
+the static content previously generated for them.
+
+
