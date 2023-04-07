@@ -51,7 +51,7 @@ management system.
 EAV in intended for databases in which a higher number of attributes are used to identify a single entity, but not all this attributes are relevant to
 that entity.
 
-When you this model, only empty-data values are kept. Although this model all for more efficient storage, it is more complicated than the falt model 
+When you use this model, only empty-data values are kept. Although this model all for more efficient storage, it is more complicated than the falt model 
 since developers must execute many queries to obtain all of the information about a product or item.
 
 Q4) What are the types of tables created when EAV model is built?
@@ -83,7 +83,7 @@ Ans)
 4) Order Management.
 5) Analysis and report.
 6) Payment
-7)Site Management
+7) Site Management
 8) Promotion tools for marketing
 9) Support from community
 10) Architecture which is extremly modular.
@@ -121,11 +121,12 @@ Ans) Magento is the platform that offers wide range of items. They have been div
 1) Magento Commerce
 2) Magento Order Management
 3) Magento Businees Intelligence
-4) Magento shipping Magento social
-5) Magento open source
+4) Magento shipping 
+5)Magento social
+6) Magento open source
 
 Magento 2.4 is the latest version give wide range of features. It offers new features and enhancements such as the B2B modle, Elastic Search, Adobe Senesi-
-pwered product recommendations, Adobe stack integration and more. 
+powered product recommendations, Adobe stack integration and more. 
 
 Q10) What is the technology stack used by magento?
 
@@ -167,7 +168,7 @@ Q13) What RMA stands for in magento?
 
 Ans)
 
-RMA stands for Return Merchandise Authorization. Which buyers to return, repair, or replace products they have previously purchased in excahnge for a 
+RMA stands for Return Merchandise Authorization. Which buyers to return, repair, or replace products they have previously purchased in exchange for a 
 refund or credit. Each store return policy will be different, but each will provide customers with thorough information regarding the valid time and 
 circumstances for returning items. As a result, RMA will follow the policy to help clients complete their requests effectively.
 
@@ -175,7 +176,7 @@ Q14) Exaplin in breif virtual type magento?
 
 Ans)
 
-On the Magento 2 platform, di.xml allows towo sort of nodes: node type and node virtual type, with the virtual type being regarded as a perfect method 
+On the Magento 2 platform, di.xml allows two sort of nodes: node type and node virtual type, with the virtual type being regarded as a perfect method 
 rather than a type. Virtual types are similar to types, but they offer more flexibility by allowing you to define a virtual class.
 
 Q15) What is the difference Mage::getModel() and Mage::getSingletone() ?
@@ -191,9 +192,13 @@ The concept of codepool is to pull code in a magento organized format. It's spec
 module.
 Magento has three codepools: core, community and local, all of which are located in the app/code/directory.
 
-Q17) What are some of the benfits of using Connect Patches in Magento?
+
+
+Q17) What are some of the benfits of using Connect Patches in Magento and what is meant by connecting patches?
 
 Ans) 
+Patch is a package of core files that are modified that aims at fixing certain security bugs that cause security vulnerabilities that were encountered
+in earlier magento versions. Though, magento versions already include all the security vunerabilities fixes at the date of release.
 
 Connect Patches have the following advantages in magento:
 
@@ -215,5 +220,113 @@ You can accomplish the following things with your magento account as a client:
 5) You can create receipt that is ready to print.
 
 Q19) How do I alter the magento core API settings?
+
+Ans)
+
+To update the magento core API configuration, follow this instructions
+
+-> Select system => Configuration from the admin menu
+-> select magento core API from the services menu on the left side of the configuration panel.
+-> Expand the general settings section by clicking on it.
+-> Type the name of the Default Response Charset you want to use
+-> Determine the client session Timeout
+-> When you're finished, click save config button
+
+Q20) Describe how to use google checkout in magento?
+
+Ans) 
+
+Magento allows online retailers to integrate with google checkout. Google checkout is google provided online payment service. It functions similar to
+paypal.
+
+Q21) Whatis Magento compilation failure?
+
+Ans)
+
+To improve performance, we can use the compilation feature to compile all magento files into a single include path.
+
+Q22) What are the different types of handles in magento?
+
+Ans)
+
+The structure of the vsisble page is controlled by handles. It determines where each block will be placed on the page. Every page has its handle, and
+each page request can have many handles.
+
+Q23) Define the ORM in magento?
+
+Ans)
+
+Object Relational Mapping (ORM) is a programming approach for converting various data kinds into objects and vice versa.
+
+ORM can be divided into two categories: -
+1)It converts several data types into objects.
+2) It converts objects to a variety of daa types.
+
+Q24) How can magento be made more secure for the cilent?
+
+Ans)
+
+For any e-commerce website security of the cilent is the first priority. 
+
+To increase the security of the website for the cilent;
+
+1) You must a develop a strong password and update is regulary.
+2) Allowing remote access to the magento content manager is not recomended.
+3) On production sites, do not distribute downloadable media
+4) Install a magento website security extension. This module not only protects your store from prospective hackers but also provides an advanced alarm
+system that allows you to deal with them quickly.
+
+Q25) How can you add blogs in magento?
+
+Ans) 
+
+Blogs are most important for enhacing a website search engine rankings. As a result, you should consider adding blogs to your website to improve it and
+attract more visitors.
+
+To add a blog to magento, you have two options:
+
+1) Use the pre-built magento blog extension
+2) Create a bespoke blog module on the webshop.
+
+Example:- Mageplaza Blog for Magento 2 is an excellent alternative if you want to set up a free readymade blog module.  
+If you want to make a custom blog, on the other hand, you'll need to design a module, which isn't straightforward.
+
+Q26) What is Model View Controller (MVC) architecture?
+
+Ans)
+
+Model-view-controller (MVC) is a well known magento architecture on the market today. Model, View and controller are three sections. The data and logic for
+operating an application will be handles by the model. The view is a lot of what you see on the application's interface, and it also lets you display
+whatever you want. Depending on the user's needs, the controller will pass or issue commands to the view and model.
+
+Convention-based and Configuration-based MVC are the two forms of MVC currently available. Magento ahs been using a configuration-based version up
+till now. To operate with the website, you'll also need a module configuration file.
+
+Q27) Name the design patterns in magento 2?
+
+Ans)
+
+1) Factory Pattern
+2) Singletone Pattern 
+3) Model View Controller Pattern
+4) Front Controller Pattern
+5) Registry Pattern 
+6) Prototype Pattern
+7) Iterator Pattern
+8) Object Pool Pattern
+9) Service Locator pattern
+10) Lazy Loading Pattern
+11) Observer Pattern
+12) Module Pattern
+13) Service Contract
+14) Object Manager (Which consists of 11 + Design Patterns)
+15) Proxy Pattern
+16) Factory Classes
+17) Dependency Injection
+18) Injectable Objects
+19) Non-injectable objects
+20) Active Records.
+
+
 
 
