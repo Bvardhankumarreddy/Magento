@@ -251,7 +251,149 @@ the static content previously generated for them.
 
 ==> php bin/magento info:backups:list (php bin/magento i:b:l)
 
-50. 
+50. Displays the list of avaliable currencies
+
+==> php bin/magento info:currency:list (php bin/magento i:c:l)
+
+51. Shows number of dependencies on magento framework
+
+==> php bin/magento info:dependencies:show-framework (php bin/magento i:d:show-f)
+
+52. Shows number of dependencies between modules
+
+==> php bin/magento info:dependencies:show-modules
+
+53. shows number of circular dependencies between modules.
+
+==> php bin/magento info:dependencies:show-modules-circular
+
+54. Dispays the list of avaliable languages locals
+
+==> php bin/magento info:language:list (php bin/magento i:l:l)
+
+55. Displays the list of avaliable timezones
+
+==> php bin/magento info:timezone:list (php bin/magento i:t:l)
+
+--------------------- Maintenance -----------------
+
+56. Sets maintance mode exempt IPs
+
+==> php bin/magento maintenance:allow-ips (php bin/magento m:a)
+
+57. Disables the maintenance mode
+
+==> php bin/magento maintenance:disable (php bin/magento ma:d)
+
+58. Enables the maintenance mode
+
+==> php bin/magento maintenance:enable (php bin/magento ma:e)
+
+59. Displays maintenance mode status
+
+==> php bin/magento maintenance:status (php bin/magento ma:s)
+
+--------------------module-----------------------
+
+60. Unistall modules installed by the composer
+
+==> php bin/magento module:uninstall. vendorname_modulename (php bin/magento m:u)
+
+--------------------SampleData----------------
+
+61. Deploy sample data modules
+
+==> php bin/magento sampledata:deploy (php bin/magento sa:d)
+
+62. Remove all sample data packages from composer.json
+
+==> php bin/magento sampledata:remove (php bin/magento sa:rem)
+
+63. Reset all sample data modules for re-installation 
+
+==> php bin/magento sampledata:reset (php bin/magento sa:res)
+
+-----------------------setup--------------------
+
+64. Create or modifies deployment configuration
+
+==> php bin/magento setup:config:set (php bin/magento s:c:s)
+
+65. Takes backup magento application code base, media and database
+
+==> php bin/magento setup:backup (php bin/magento s:b)
+
+66. Runs cron job scheduled for setup installation 
+
+==> php bin/magento setup:cron:run (php bin/magento s:c:r)
+
+67. Installs and upgrades in Database schema
+
+==> php bin/magento setup:db-schema:upgrade (php bin/magento s:db-s:u)
+
+68. Check database schema or data requires upgrade
+
+==> php bin/magento setup:db:status (php bin/magento s:d:s)
+
+69. Generates Di configuration and all missing classes that can be auto-generated
+
+==> php bin/magento setup:di:compile (php bin/magento s:d:c)
+
+70. Installs the Magento application 
+
+==> php bin/magento setup:install (php bin/magento s:i)
+
+71. Generaates Fixtures
+
+==> php bin/magento setup:performance:generate-fixtures (php bin/magento s:p:g)
+
+72. Rolls back the magento application codebase, media and database
+
+==> php bin/magento setup:rollback (php bin/magento se:r)
+
+73. Deploy static view files
+
+==> php bin/magento setup:static-content:deploy (php bin/magento s:s:d)
+
+74. Install the store configuration. Deprecated since 2.2.0 Use config:set instead
+
+==> php bin/magento setup:store-config:set (php bin/magento s:s:s)
+
+75. Uninstall the magento application
+
+==> php bin/magento setup:uninstall  (php bin/magento s:un)
+
+76. Upgrades the magento application, Db data and schema
+
+==> php bin/magento setup:upgrade
+
+-------------------Stores----------------------
+
+77. Displays the list of stores
+
+==> php bin/magento store:list
+
+78. Displays the list of websites
+
+==> php bin/magento store:website:list 
+
+------------------Themes-------------------
+
+79. Uninstalls themes
+
+==> php bin/magento theme:uninstall
+
+
+-----------------Varnish----------------
+
+80. varnish
+
+==> php bin/magento varnish:vcl:ge
+
+
+
+
+
 
 
 
