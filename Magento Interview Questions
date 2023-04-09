@@ -45,7 +45,7 @@ Ans)
 
 Q3) Explain breifly about EAV model?
 
-Ans) The EAV model (Entry, Attribute, Value) is also known ass object-attribute-value or Open Schema Magento makes use of a database or a catalog 
+Ans) The EAV model (Entry, Attribute, Value) is also known as object-attribute-value or Open Schema Magento makes use of a database or a catalog 
 management system.
 
 EAV in intended for databases in which a higher number of attributes are used to identify a single entity, but not all this attributes are relevant to
@@ -192,6 +192,11 @@ The concept of codepool is to pull code in a magento organized format. It's spec
 module.
 Magento has three codepools: core, community and local, all of which are located in the app/code/directory.
 
+_Community:- It is used by third party extensions
+
+_core:- It is used by magento core team
+
+_local:- Local codepool should be used for in-hour module development and overriding of the core and community modules for custo requirement.
 
 
 Q17) What are some of the benfits of using Connect Patches in Magento and what is meant by connecting patches?
@@ -260,7 +265,7 @@ Object Relational Mapping (ORM) is a programming approach for converting various
 
 ORM can be divided into two categories: -
 1)It converts several data types into objects.
-2) It converts objects to a variety of daa types.
+2) It converts objects to a variety of data types.
 
 Q24) How can magento be made more secure for the cilent?
 
@@ -328,5 +333,225 @@ Ans)
 20) Active Records.
 
 
+Q28) What is the Order life cycle in magento 2?
+
+Ans) 
+
+                                     New Order
+                                         |
+                                         |
+                                         |
+                                         v
+                       Cancelled <--- Submit ---> On Hold
+                                         |
+                                         |
+                                         |
+                                         v
+                                    Pending Payment ----> Refund
+                                         |                  |
+                                         |                  |
+                                         |                  |
+                                         v                  |
+                                   Payment Received         |
+                                    (Processing)            |
+                                         |                  |
+                                         |                  |
+                                         |                  |
+                                         v                  |
+                                    Order Invoiced          |
+                                         |                  |
+                                         |                  |
+                                         |                  |
+                                         v                  |
+                                    Order Shipped           |
+                                         |                  |
+                                         |                  |
+                                         |                  |
+                                         v                  |
+                                      Complete              |
+                                         |                  |
+                                         |                  |
+                                         |                  |
+                                         v                  v
+                                      Order Archived ----> Closed
+
+1) New Order: - A new order is the order the customer places in magento store.
+
+2) Cancelled: - The order status set to be cancelled if the customer cancels the order or if the order is not paid off.
+
+3) On Hold:- The order is put on hold if more information is required from the customer to process an order before the order is purchased.
+
+4) Pending:- In the order grid, the sales order status is intially pending. The pending orders are the new orders, which have not processed, and the
+order can be still edited and cancelled. These orders need to be invoiced and shipped.
+
+5) Receive payment (processing): - The order status is changed for pending to processing when the payment is received and authorized. According to the
+payment is received and authorized. Acording to the payment method that the customers choose, you might receive a notification when the transaction
+is authorized is processed.
+
+6) Invoice Order:- An order is invoiced after the payment os received. Some payment methods automatically generate an invoice when the payment is
+authorized and captured. The payment method decides which onvoicing options are needed for the order. After the invoice is generated and submitted, a 
+copy is sent to the customer.
+
+7) Book a single shipment:- After completing the shipment detail, the shipment is booked, also the packing slip and shipping label is printed. The 
+customers receive a notification via email or text message that the package is shippe. If the tracking number is provided, then the customer can track
+the shipment from their account.
+
+To book a batch of shipments, enter and process the shipment information for several orders as a batch.
+
+8) Order Shipped:- Order shipment is generated when an order status is changed from pending to complete.
+
+9)Complete:- when the order is both invoiced and shipped, its status is marked as complete.
+
+To view an order
+
+Step 1:- Login to Magento 2 Admin Panel
+
+Step 2:- Go to SALES --> ORDERS
+
+Step3:- Next, you can see the list of orders. Click on the VIEW link corresponding to the order, whose order information you want to see, such as order
+status.
+
+Step4:- Here, we will see the detailed information of the order and customer account, billing address, payment and shipping method, item ordered and
+order total.
+
+On the same page, the left panel of the order provides access to different types of information related to the order.
+
+ORDER VIEW DESCRIPTION
+
+1) Infomration: - This section displays complete information about an order and account. It also includes the address information, payment and shipping
+methods, item orders,notes and total.
+
+2) Invoices: - An invoice is a record of payment records of an order. It lists each invoice that is associated with the order.
+
+3) Credit Memos: -Lists each credit memo, which is associtaed with the order. It is a document that shows the amount due by the customer for a partial or
+full refund.
+
+4) Shipments: -It lists each shipment reccords of all invoices that are associated with the order and has been prepared for shipping.
+
+5) Comments History: - Lists all notes, which are related to the order.
 
 
+Q29) How to fecth 5 bestselles products programmatically in magento?
+
+Ans)
+
+Mage::getResourceModel('reports/product_collection')
+->addOrderedQty()
+->addAttributeToSelect('*')
+->setPage(1,5)
+->load();
+
+Q30) How to convert default currency to others in magento?
+
+Ans)
+
+To convert default currency to others, select the curency and import currency rates from System -> Manage Currency -> Rates
+
+Syntax:-
+
+$convertedPrice = Mage::helper('directory')->currencyConvert($price, currentCurrency, newCurrency);
+
+Q31) How to enable Maintance Mode in magento?
+
+Ans)
+
+Create a file as 'maintance.flag' and upload it to Magento home directory containing following code.
+
+$maintenanceFile = 'maintenance.flag';
+
+if(file_exists($maintenanceFile)){
+   include_once dirname(__FILE__).'/errors/503.php';
+   exit;
+   
+   }
+ 
+ Q32) How will get teh first and last form the collection in magento?
+ 
+ Ans)
+ 
+ $collection->getFirstItem()
+ and
+ $collection->getLastItem()
+ 
+ Q33) How to make magento working with another domain?
+ 
+ Ans)
+ 
+ To let the magento working with another domain, URL option of magemto base can be change.
+ 
+ Follow these steps:-
+ 
+ 1) Select Magento admin? System? Configuration and then click web.
+ 2) Choose unsecure option
+ 3) Replace the base URL field.
+ 
+ Q34) How can you reset Magento Files and Directory Permissions?
+ 
+ Ans)
+ 
+ Change the directory where magento is installed and execute the following commands.
+ 
+ 1) find.-type d -exec chmod 755
+ 2)chmod+x magento
+ 
+ Q35) Is it to have more than one grid in magento?
+ 
+ Ans) Yes, it is possible
+ 
+ Q36) State whether namespace is mandatory while creating a custom module in Magento?
+ 
+ Ans)
+ 
+ No, namespace is not mandatory while creating custom module.
+ 
+ Q37) How to enable product's custom attribute visibility in frontend?
+ 
+Ans)
+ 
+In Magento attributes section under custom attribute, select YES for "visible on Product View Page on Frontend" and "Used in product in listing"
+ 
+Q38) How to run custom query in Magento?
+ 
+Ans)
+ 
+ To run custom query,
+ 
+$db = Mage::getSingleton('core/resource')->getConnection('core_write');
+$result = $db->query('SELECT * FROM users where id=4');
+ 
+Q39) When you need to clear the cache to see the changes made in magento?
+ 
+Ans)
+ 
+When you have added or modified XML, CSS or JS file.
+ 
+Q40) State the syntax to call a CMS page in your module's PHTML file?
+
+Ans)
+
+$this->getLayout()->createBlock('cms/block')->setBlockId('blockidentifer')->toHtml();
+
+Q41)How can you add an external javascript/css file to magento?
+
+Ans)
+
+css/yourstyle.css
+
+or
+
+skin_jsjs/yourfile.js
+skin_csscss/yourstyle.css
+
+Q42) Explain different modules in Magento?
+
+Ans)
+
+Core Modules
+Community MOdules
+Custom Modules
+
+Q43) What was initial realse date Magento?
+
+Ans) 
+
+31st March 2008
