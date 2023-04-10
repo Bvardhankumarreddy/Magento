@@ -48,3 +48,29 @@ You must register a web service on Admin. Use the following general steps to set
 which resources the integration can access.
 
 3. Use a REST or SOAP client to configure authentication.
+
+
+API Security
+
+Imposing restrictions on the size and number of resources that a user can request through an API can help mitigate denial-of-service (DoS) 
+vulnerabilities. By default, the following built-in API rate limiting is available:
+
+=> REST requests containing inputs that represent a list of entities. When enabled, the default maximum is 20 for synchronous requests and 5,000 for 
+asynchronous requests.
+
+=> REST and GraphQL queries that allow paginated results can be limited to a maximum number of items per page. When enabled, the default maximum is 300.
+
+=> REST queries that allow paginated results can have a default number of items per page imposed. When enabled, the default maximum is 20.
+
+By default, these input limits are disabled, but you can use the following methods to enable them:
+
+=> Set the values in Admin
+
+=> Run the "bin/magento config:set" command
+
+=> Add entries to the env.php file.
+
+=> set environmentable variables.
+
+When input limiting has been 
+
