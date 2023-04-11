@@ -72,5 +72,83 @@ By default, these input limits are disabled, but you can use the following metho
 
 => set environmentable variables.
 
-When input limiting has been 
+When input limiting has been enabled, the system uses the default value for each limitation listed above. You can also configure custom values.
+
+Although some simple examples for configuring these values from the CLI are provided below, all of these values can be configured per website and per
+store view in addition to being configurable globally. In addition, these values can also be configured via "env.php" as well via environment variables.
+
+Enabling the input limiting system
+
+To enable these input limmiting features from the Admin, Go to Stores  > Settings > Configuration > Services > Web Api limits or GraphQL Input Limits 
+and set Enable Input Limits "Yes".
+
+To enbale with the CLI run any one of the below command: -
+
+php bin/magento config:set webapi/validation/input_limit_enabled 1
+  
+  
+  or
+  
+php bin/magento config:set graphql/validation/input_limit_enabled 1
+
+Maximum Paramters Inputs
+
+The "EntryArrayValidator" class construct limits the number of objects that can be given to inputs that represent array of objects. For example,
+the "PUT/V1/guest-carts/{cartId}/collect-totals" end point contians the input parameter "additionalData->extension_attributes->gift_messages" which
+represents a lost of gift message information objects. 
+
+There are four possible input arrays:
+
+1. additional_data
+2. agreement_ids
+3. gift_message
+4. custom_attributes
+
+
+{
+  "paymentMethod": {
+    "po_number": "string",
+    "method": "string",
+    "additional_data": [
+      "string"
+    ],
+    "extension_attributes": {
+      "agreement_ids": [
+        "string"
+      ]
+    }
+  },
+  "shippingCarrierCode": "string",
+  "shippingMethodCode": "string",
+  "additionalData": {
+    "extension_attributes": {
+      "gift_messages": [
+        {
+          "gift_message_id": 0,
+          "customer_id": 0,
+          "sender": "string",
+          "recipient": "string",
+          "message": "string",
+          "extension_attributes": {
+            "entity_id": "string",
+            "entity_type": "string",
+            "wrapping_id": 0,
+            "wrapping_allow_gift_receipt": true,
+            "wrapping_add_printed_card": true
+          }
+        }
+      ]
+    },
+    "custom_attributes": [
+      {
+        "attribute_code": "string",
+        "value": "string"
+      }
+    ]
+  }
+}
+
+By default any one of these arrays can include up to 20 items, but you can change this value in the configuration UI via 
+Stores > Serrings > Configuration > Services > Web API Limits > Input List Limit or via CLI using the webapi/validation/complex_array_limit configuration
+path.
 
