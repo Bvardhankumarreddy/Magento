@@ -45,7 +45,7 @@ Ans)
 
 Q3) Explain breifly about EAV model?
 
-Ans) The EAV model (Entry, Attribute, Value) is also known as object-attribute-value or Open Schema Magento makes use of a database or a catalog 
+Ans) The EAV model (Entity, Attribute, Value) is also known as object-attribute-value or Open Schema Magento makes use of a database or a catalog 
 management system.
 
 EAV in intended for databases in which a higher number of attributes are used to identify a single entity, but not all this attributes are relevant to
