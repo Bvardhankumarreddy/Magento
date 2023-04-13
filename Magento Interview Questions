@@ -695,10 +695,6 @@ transport them very easily.
 The need for it is vast as it is used for outsourcing the data primarily. HTML documents use XML to store the data as a backend. It stores the data in a
 plain text format, and it is independent of the platform, which can be imported or exported or simply move from one place to another without any problem.
 
-==>Q)Who is the Right Audience for learning XML Technologies?
 
-Though it is pretty easy to learn, a pre-requisite knowledge of XSLT, XQuery and XPath will be good to have for an audience wanting to learn. Apart from
-these, knowledge of HTML is also a good thing to have.
 
-==>Q) 
 
