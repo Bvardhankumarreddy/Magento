@@ -122,7 +122,7 @@ Ans) Magento is the platform that offers wide range of items. They have been div
 2) Magento Order Management
 3) Magento Businees Intelligence
 4) Magento shipping 
-5)Magento social
+5) Magento social
 6) Magento open source
 
 Magento 2.4 is the latest version give wide range of features. It offers new features and enhancements such as the B2B modle, Elastic Search, Adobe Senesi-
@@ -157,7 +157,7 @@ Ans)
 
 There are three different distinct sessions:-
 
-1) Core senssion
+1) Core session
 2) Customer session
 3) Checkout session
 
@@ -196,7 +196,7 @@ _Community:- It is used by third party extensions
 
 _core:- It is used by magento core team
 
-_local:- Local codepool should be used for in-hour module development and overriding of the core and community modules for custo requirement.
+_local:- Local codepool should be used for in-hour module development and overriding of the core and community modules for custom requirement.
 
 
 Q17) What are some of the benfits of using Connect Patches in Magento and what is meant by connecting patches?
@@ -244,7 +244,7 @@ Ans)
 Magento allows online retailers to integrate with google checkout. Google checkout is google provided online payment service. It functions similar to
 paypal.
 
-Q21) Whatis Magento compilation failure?
+Q21) What is Magento compilation feature?
 
 Ans)
 
@@ -264,7 +264,7 @@ Ans)
 Object Relational Mapping (ORM) is a programming approach for converting various data kinds into objects and vice versa.
 
 ORM can be divided into two categories: -
-1)It converts several data types into objects.
+1) It converts several data types into objects.
 2) It converts objects to a variety of data types.
 
 Q24) How can magento be made more secure for the cilent?
@@ -555,3 +555,150 @@ Q43) What was initial realse date Magento?
 Ans) 
 
 31st March 2008
+
+Q44) What is the use of XML filei n magento?
+
+Ans)
+
+XML stands for Extensible Markup Language a text-based language used to define markup documents to publish on web. It cna contain data and its formatting
+details as common data. XML can be used for its signitficant data storage capacity, holding public standards, and being extensible compared to another
+markup language. This language aas formed from extracting the properties of SGML, that is Standard Generalized Markup Language.
+
+Understanding XML
+
+1. Extensible: - It allows us to create different tags with proper description or language according to the need.
+
+2. Data Storage:- It is used to store the data irrespective of how it will be presented in the next step.
+
+3. Public Standard: - An organization called world wide consortium or w3c develop it and made it avaliable as an open standard.
+
+Uses of XML
+
+1. This can be used to express any type of data, and there are not many restrictions on it.
+
+2. It is used to simplify the creation of HTML document which is used in big websites.
+
+3. They are easily merged with style sheets which can help to create a lot of different output.
+
+4. They are used for data exchange between different organizations or different systems.
+
+5. They facilitate data handling and are used to store and arrange data in desired ways.
+
+6. They are used for reloading databses or for different maintanence activities.
+
+There are set of rules defined by XML in line with markup  language used for encoding documents to be read by both humans and machines.
+
+==> Q) How does XML make working easy?
+
+Writing XML documents are easy as compared to compared to other markuo languages. There are no predefined rules to follow, and authors can create their 
+own tags and rules to serve their needs. In this way XML is flexible for developing the document. It can also be used in the backend of any web 
+application to maintain. 
+
+Major companies that use XML are Google, Microsoft, Facebook, Ford Motors and many others.
+
+==> What you can do with XML?
+
+XML can used for the storage and transportation of data and information. It purely document-based technology independent of any specialized software or 
+hardware requirement. It is also self-descriptive language. Being self-descriptive, it conatins sender information, receiver information, a heading
+and a message body. Information can be added at any time, extending the content of the document making XML extensible. 
+
+Working with XML
+
+It consists of two parts:
+
+1. Mark up
+2. Text or characters of data
+
+The below declaration indicates the XML version and encoding
+
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+Root Element
+
+A single XML document has only one root element like below:
+
+<root>
+<x>...</x>
+<y>...</y>
+</root>
+
+Case Sensitive: -
+
+The XMl element is always case senestive, which means that the start and end elements have to be in the same case.
+
+An attriute is a single property of an element that uses a name-value pair. There may be multiple attributes for an element. 
+
+Example: -
+
+<a href = "http://www.samplearticle.com/">Sample</a>
+
+href -> is the attribute
+http://www.samplearticle.com/ -> is the attribute value
+
+There few syntax rules defined for attributes as defined below:-
+
+1) The XML attribute name is case sensitive
+2) There must not be multiple values for the same attribute.
+3) The attribute values appear in quotation marks, whereas attributes names are defined without quotatin marks.
+
+
+There are two types of references: -
+
+Entity Reference: -
+
+In an entity reference, there is a name defined between the start and end delimiters. Any kinds of predefined string like text or mark-up can be used 
+as a  name.
+
+Character Reference:-
+
+The character refernces have references containing a hash mark ("#") followed by a number. The number refers to the unicode of a character.
+
+The names of attributes and elements are ase sensitive, meaning the start and end attributes should be in the same case. All character encoding problems
+can be avoided by saving the document in Unicode UTF-* or UTF-16 format. 
+
+Advantages
+
+1. The document standard is an international standard and is maintained by W3C, the organization that is responsible for maintaining web standards. 
+XML documents are not particular to any vendor nor tied to any single application or organization. There are a lot of varieties of document writers that
+are available in the market. Some of them are often proprietary and work with the software allocated for that particular type of document. However, XML 
+documents can be created in any editor and can be edited on a different editor, thus making them independent of a particular assigned editor. Even 
+Notepad text editor can be used to create XML documents, although it is not recommended.
+
+2. XML tags or XML elements are used to define the structure of an XML document. Once document structure is defined that, processes can be selected like
+style sheets to manipulate the content and reuse them after manipulation. With content being separated from the display, we can use single-source 
+content in many different contexts. Unlike HTML, it does not have a fixed number of tags or elements, thus allowing the designer to design a document 
+with meaningful tags. It allows designers to create markup language according to their needs. Even new elements can be defined as per requirement giving
+the designer the ability to make custom elements is a unique feature offered by XML.
+
+3. They provide a feature of reuse of the contents, thereby allowing the different organizations to save much money and effort along with making the 
+authors more efficient. Once the content is created, that can be used in several other documents. XML documents are often manipulated to adjust the 
+needs of different users. Different style sheets can be applied to an XML document to manipulate the content which is appropriate for some particular 
+users or to output different types of documents.
+
+4. The separation of content and format is allowed by XML. A separate style sheet is maintained where the formatting of the XML document is done. Thus,
+because of this independence, easy updating and maintenance of the document are possible when needed. Also, it is easy for maintaining a consistent 
+stylesheet for all documents when the content is separated from the formatting.
+
+5. It is very useful when publishing a document in more than one language or multiple languages originating from the same source. The override of 
+translations also can be reduced if the content is stored in XML source files. Thus, when publishing the documents in several languages can be done with
+just a single click. The formatting is automatically applied when publishing the source XML files.
+
+==>Q) Why should we use XML?
+
+There are many purposes of using XML, like transporting the data in a structured format from a source point to any destination and many others. The tags 
+used in XML are for ensuring the structure of the data. The combination of tags and texts is used to store information. The text is surrounded by tags 
+that are written following pre-defined rules and contains meaningful information about the enclosed text. Thus, it is very easy to store information and 
+transport them very easily.
+
+==> Q) Why do we need XML?
+
+The need for it is vast as it is used for outsourcing the data primarily. HTML documents use XML to store the data as a backend. It stores the data in a
+plain text format, and it is independent of the platform, which can be imported or exported or simply move from one place to another without any problem.
+
+==>Q)Who is the Right Audience for learning XML Technologies?
+
+Though it is pretty easy to learn, a pre-requisite knowledge of XSLT, XQuery and XPath will be good to have for an audience wanting to learn. Apart from
+these, knowledge of HTML is also a good thing to have.
+
+==>Q) 
+
