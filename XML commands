@@ -1,0 +1,103 @@
+1. XML declaration
+
+<?xml version="1.0">
+<?xml version="1.0" encoding="UTF-8"?>
+
+2.Element tag: Element names are case-sensitive, and they should start with a letter or underscore. It cannot contain spaces, but they can contain a letter, 
+digits, underscore.
+
+
+Syntax:- <element></element>
+
+Example:- <text></text>
+
+3. Root tag: It can be onliy one in an XML document or XML file.
+
+Syntax:- <root> <x> </x> </root>
+
+Example:- <Name> <<firstName></firstName> </Name>
+
+4. Add: Inlcude the node to XML commands.
+
+Example:- <add afterID=" system"> </add>
+
+5. Remove:- used for removing a node the specific id from resulting XML.
+
+Example:- <remove node=" system" />
+
+6. SET:- This changes the parent element is resulting in the XML.
+
+Example:- <set prop1="name" value=" TOM" />
+
+7. Setattribute:- Change the set of attrbiutes for the parent xml in the resulting XML.
+
+Example:- <setAttributes attr1="name" attr2="value" />
+
+8. Empty tag:- Command is used to show the element which is not having content
+
+Example:- <hr> </hr> or <hr />
+
+9. Namepsace:- This is being used to avoid conflict; start the name using a prefix.
+
+Example:- 
+<k: table> <k: name> JOHN </k: name> </k: table>
+<j: table> <j: name> WRIGHT </j: name> </j: table>
+
+10. XLink:- This is used to create hyperlinks with in XML documents.
+
+Example:-
+
+<page xmlns: xlink= http://www.ggogle.com"> </page>
+
+
+Advanced XML Commands
+
+11. XML DTD:- This is a file that has DOCTYPE declaration in the XML commands in the file. It is used for XML to make it well managed and valid for the XML.
+
+Example:- 
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE abc SYSTEM "ABC.dtd">
+<abc>
+<to>John</to>
+<from>TOM</from>
+<heading>HI</heading>
+<body>Hello, World!</body>
+</abc>
+
+12.XML Schema:- This XML commands is used as XS in the XMl file. It also defines the structure of the XML file or the document. It is valid aganist 
+the schema to be well-formed and valid.
+
+Example:-
+
+<xs:element name="Personal">
+<xs:ABC>
+<xs:details>
+<xs:element name="name" type="xs:string"/>
+<xs:element name="location" type="xs:string"/>
+<xs:element name="heading" type="xs:string"/>
+<xs:element name="body" type="xs:string"/>
+</xs:details>
+</xs:ABC>
+</xs:element>
+
+13. XPath:- This expression is used to select the root element like /abc, and it selects the other elements based on the tag provided like /abc/1.
+
+14. To format the XML document, XSL-FO language is being used; it is the set of language that can transform XML into XHTML, filter, and sort XML data. 
+It helps in displaying the negative number and XML data output in the form of pictures and paper.
+
+Example:- 
+<?xml version="1.0" encoding="UTF-*"?>
+<?xml-stylesheet type="text/xsl" href="simple.xsl"?>
+<Details>
+<Personal>
+<name>JOHN LUI</name>
+<Age>28</price>
+<location>USA</calories>
+</Personal>
+</Details
+
+15. XML can be used for programming as well, to parse the XML based on the java programming document object model is used. It also called a DOM
+compliant parser. There are many other parsers also available for the same.
+
+16. XML is also being used with CSS, the same way HTML has been used with CSS. Need to provide the below text in an XML file
