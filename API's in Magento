@@ -49,6 +49,26 @@ which resources the integration can access.
 
 3. Use a REST or SOAP client to configure authentication.
 
+USE REST API's
+
+The magento rest api defines a set of functions that a developer can use to perform requests and abd receive responses. These interattions were performed 
+using HTTp protocol.
+
+The caller issues an HTTP request, which contains following elements:-
+
+=> An HTTP header that provides authentication andd other instructions.
+
+=> A verb, which can be onde of GET, POSt, PUT or DELETE.
+
+=> An endpoint, which is uniform Resource Indicator (URI) that identifies the server, the web service, and the resource being acted on.
+
+=> The call payload, which is set of input parameters and attributes that you supply with the request.
+
+Magento returns a request payload as well as an HTTP status code.
+
+You can REST web API calls through CURL commands or a REST client.
+
+
 
 API Security
 
@@ -149,6 +169,10 @@ There are four possible input arrays:
 }
 
 By default any one of these arrays can include up to 20 items, but you can change this value in the configuration UI via 
-Stores > Serrings > Configuration > Services > Web API Limits > Input List Limit or via CLI using the webapi/validation/complex_array_limit configuration
+Stores > Settings > Configuration > Services > Web API Limits > Input List Limit or via CLI using the webapi/validation/complex_array_limit configuration
 path.
+
+Input limit for REST endpoints
+
+Some REST endpoints can contain a high number of elements, and developers 
 
