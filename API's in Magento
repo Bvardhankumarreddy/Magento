@@ -174,5 +174,63 @@ path.
 
 Input limit for REST endpoints
 
-Some REST endpoints can contain a high number of elements, and developers 
+Some REST endpoints can contain a high number of elements, and developers need a way to set the limit for each endpoint. The limit for a specific REST 
+endpoint can be set in the webapi.xml configuration file for synchronous requests and webapi_async.xml for asynchronous requests. To do this, assign 
+a value for the <data input-array-size-limit/> attribute within a <route> definition. The value for input-array-size-limit must be a non-negative integer.
+
+The following example sets the input limit for .the "/V1/some-custom-route" route. If the route works synchronously, open the <module_dir>/etc/webapi.xml
+configuration file. Otherwise, open <module_dir>/etc/webapi_async.xml. Add the data tag with the input-array-size-limit attribute to the roue 
+configuration.
+
+
+<?xml version="1.0"?>
+<!--
+Some custom module
+-->
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="/V1/some-custom-route" method="POST">
+        <service class="Vendor\Module\Api\EntityRepositoryInterface" method="save"/>
+        <resources>
+            <resource ref="Vendor_Entity::entities" />
+        </resources>
+        <data input-array-size-limit="5" /> <!--  limit only for route `/V1/some-custom-route`  -->
+    </route>
+</routes>
+
+
+Values by default for REST endpoints
+
+If you need tio change the default limits for REST endpoints, then edit the webapi section of the "<magento_root>/app/etc/env.php" file as follows:-
+
+[
+//...
+    'webapi' => [
+        'sync' => [
+            'default_input_array_size_limit' => <non-negative value>, //overrides values for synchronous REST endpoints
+        ],
+        'async' => [
+            'default_input_array_size_limit' => <non-negative value>, //overrides values for asynchronous REST endpoints
+        ],
+    ]
+//...
+];
+
+Maximum Page Size
+
+The maximum page setting controls the pagenation of various web API responses. By default, the maximum value is 300. You can change the default in the 
+Admin by selecting Stores > Settings > Configuration > Services > Web API input limits or GraphQl Input Limits > Maximum Page Size field.
+
+Default Page Size
+
+The Default page size setting controls the pagination of various web API responses. You can change the default value of 20 in the Admin by selecting 
+Stores > Settings > Configuration > Services > Web API input Limits > Default Page Size.
+
+To change the value from the CLI, run the following command:
+
+bin/magento config:set webapi/validation/default_page_size 30
+
+
+
+
 
