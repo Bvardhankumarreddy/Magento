@@ -231,6 +231,30 @@ To change the value from the CLI, run the following command:
 bin/magento config:set webapi/validation/default_page_size 30
 
 
+Construct a Request-----------
+
+To configure a web API developers define some of the elements of each API call in the "<module rootdir>/vendor/<vendor-name>/<module-name>/etc/webapi.xml"
+file, where <vendor-name> is your vendor name and <module-name> is your module name. For example the web API for the customers service is defined in the
+<magento_root>/vendor/magento/module-customer/etc/webapi.xml  configuratin file. Service and data interfaces and builder define the required and optional
+paramters and return the values for the API calls.
+
+---------Overview---------
+
+The following tables and sections that follow the table describe web API call elements:-
+
+Element                 Specifies
+
+1. HTTP verb            The action to perform aganist the endpoint.
+
+2. Endpoint             A combination of the server that fullfills a request, the web service, and the resource aganist which the request is being made.
+
+3. HTTP headers         The authentication token, the call request and response formats, and other information.
+
+4. Call Payload.         A set of input parameters and attributes that you supply with the request. API operations have both "required" and "optional"
+                         inputs. You can specify input parameters in the URL and input attributes in a request body. You can specify a JSON- or XML-formatted
+                         request body.
+
+
 
 
 
