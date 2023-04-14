@@ -697,4 +697,30 @@ plain text format, and it is independent of the platform, which can be imported 
 
 
 
+Q45) What are observer and events?
+
+Ans) 
+
+Events:- 
+
+Events are dispacted by magento 2 modules whenever specific actions are triggered. When an event dispacthes, it passes data to the observer that is
+configured to watch that event. You can dispatch Magento 2 Events using the Magento\Framework\Event\ManagerInterface class. This class can be obtained through
+dependency injection by defining the dependency in the constructor method of the class.
+
+To dispatch an event, you have to cal the dispatch function of the event manager class, providing the name of the event along with an array of data
+that you wish delievr to observers.
+
+Observers:-
+
+Observers are the particular classes that control the general behaviour, performance or change in the business logic of the store. They are executed
+whenever a specific for which they were set to listen is tiggered.
+
+To create an observer in magento 2, you must place your class file under the ModuleRoot/Observer  diretctory. The observer class file should use 
+Magento\Framework\Event\Observer and Magento\Framework\Event\ObserverInterface class define the executive function.
+
+Q46) What is API and what are the API's used in magento?
+
+Ans)
+
+
 
