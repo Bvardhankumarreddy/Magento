@@ -24,6 +24,10 @@ Note: - The below command is used to check the production mode of magento.
 Q2) What are magento magic methods? 
 
 Ans)
+
+A magic method are special methods which are used to override PHP's default action when certain actions are performed an object. All methods starting 
+with __are reserved by behaviour.
+
 1) __get()
 2) __set()
 3) __call()
@@ -101,7 +105,7 @@ Ans)
 7) Making single file with all external CSS/JS.
 8) Make use of content delivery network (CDN)
 
-All of the above will increase the speed of the magento website. Making it responsive and performmant.
+All of the above will increase the speed of the magento website. Making it responsive and performmance.
 
 
 
@@ -112,7 +116,7 @@ Ans)
 Magento is one of the most popular e-commerce platforms avalibale.
 
 The major drawback of the magento is it needs exessive amount of storage and memory. It also necessitates object-oriented programming to avoid becoming 
-a complicated system. Furthermore, Magento has the potential to slow down and degrage the speed of your website. 
+a complicated system. Furthermore, Magento has the potential to slow down and degrade the speed of your website. 
 
 Q9)What are the different versions avalibale in magento?
 
@@ -293,7 +297,7 @@ To add a blog to magento, you have two options:
 1) Use the pre-built magento blog extension
 2) Create a bespoke blog module on the webshop.
 
-Example:- Mageplaza Blog for Magento 2 is an excellent alternative if you want to set up a free readymade blog module.  
+Example:- Mageplaza Blog for Magento 2 is an excellent alternative if you want to set up a free ready made blog module.  
 If you want to make a custom blog, on the other hand, you'll need to design a module, which isn't straightforward.
 
 Q26) What is Model View Controller (MVC) architecture?
