@@ -526,4 +526,129 @@ $options = [
 }
 
 
+ USE cURL TO RUN THE REQUEST
+ 
+ cURL is the command line-tool that lets you transmit HTTP requests and responses from the command line or a shell script. It is avalibale for 
+ linux distributions, Mac OS and windows.
+ 
+ To use cURL to run your REST web API call, use the cURL command syntax to construct the command. 
+ 
+ To create the endpoint in the call, append the REST URI that you constructed in Construct a request to this URL:
+ 
+ "https://<MAGENTO_HOST_OR_IP>/<MAGENTO_BASE_INSTALL_DIR>/rest/"
+ 
+ To pass the customer data objects in the POST call payload, specify a json or XML request body on the call.
+ 
+ CURL examples:- 
+ 
+    Option.           Description
+ 
+ 1. -d -data         Send the specified data in a POST request to the HTTP server. Use this option to send a JSON or XML request body to the server.
+ 
+ 2. -H -header.      Specifies an extra HTTP header in the request. Precede each header with the -H option. You can specify any number of extra headers
+                     For a list of common headers used in Magento web API requests.
+                     
+ 3. -i -input        Includes the HTTP header in the output.
+ 
+ 4. -s -silent.      Specifies slinet or quite mode, which makes cURL mute. Progress and error messages are surpassed.
+ 
+ 5. -T -uploadfile  Transfers the specified local file to the remote cURL.
+ 
+ 6. -X -request     Specifies the request method to use when communicating with HTTP server. The specified request method is used instead of the default
+                     GET method.
+                     
+==> USING cURL in Magento 
+
+Magento provides its own service-wrapper for using cURL instead of using the default PHP cURL. The class "Magento\Framework\HTTP\Client\Curl"
+may be used to work with HTTP protocol using cURL library. First, create an instance of "Magento\Framework\HTTP\Client\Curl"
+
+/**
+* Constructor.
+*
+* @param Magento\Framework\HTTP\Client\Curl $curl
+*/
+public function __construct(
+   Magento\Framework\HTTP\Client\Curl $curl
+) {
+   $this->curl = $curl;
+}
+
+==> Make GET request using cURL
+
+// get method
+$this->curl->get($url);
+
+// output of curl request
+$result = $this->curl->getBody();
+
+
+where $url is the endpoint URL
+
+==> Make POST request cURL
+
+// post method
+$this->curl->post($url, $params);
+
+// output of curl requestt
+$result = $this->curl->getBody();
+
+where $url is the endpoint URL, $params is the array of data that is being sent via the POST request. Other parameters may be added in the URL directly.
+A $params example:
+
+$params = [
+  'user[email]' => $user->getEmail(),
+  'user[cellphone]' => $providerInfo['phone_number'],
+  'user[country_code]' => $providerInfo['country_code'],
+]
+
+The cURL client can also add headers, basic authorization, additonal cURL options, and cookies in the cURL request. The cURL client provides these methods 
+before using get or post method.
+
+==> Set cURL header using addHeader method
+
+The header accepts two parameters. The cURL header name and a cURL header value.
+
+$this->curl->addHeader("Content-Type", "application/json");
+$this->curl->addHeader("Content-Length", 200);
+
+==> Set cURL header using setHeaders method
+
+The setHeaders method accepts an array as a parametter.
+
+$headers = ["Content-Type" => "application/json", "Content-Length" => "200"];
+$this->curl->setHeaders($headers);
+
+==> Set basic authorization in cURL
+
+Set the basic authorization using the setCredentials method.
+
+$userName = "User_Name";
+$password = "User_Password";
+
+$this->curl->setCredentials($userName, $password);
+
+Is equivalent to setting CURLOPT_HTTPHEADER value:
+
+"Authorization : " . "Basic " . base64_encode($userName . ":" . $password)
+
+==> Set cURL option using setOption method
+
+The setOption method accepts two parameters. The cURL option name and the cURL option value.
+
+$this->curl->setOption(CURLOPT_RETURNTRANSFER, true);
+$this->curl->setOption(CURLOPT_PORT, 8080);
+
+==> Set cURL option using setOptions method
+
+The setOptions method acccepts an array as paramter
+
+$options = [CURLOPT_RETURNTRANSFER => true, CURLOPT_PORT => 8080];
+
+$this->curl->setOptions($options);
+
+
+
+
+
+
  
