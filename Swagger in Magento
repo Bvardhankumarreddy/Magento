@@ -1,1 +1,12 @@
+Swagger in Magento 
 
+Magento 2 REST API is based on openAI specification (OAS) or Swagger Specifications, OAS are meant for how we can describe, structure and 
+visualize api resources. 
+
+Magento 2 RESTFUl API swagger is based on swagger specification and uses Swagger UI tool to generate and visualize API documentation so it
+can be easily unerstood and used. 
+
+Magento2 provides Magento_Swagger module to list, visualize and at the same time test API resources.
+
+
+==> http://website-base-url/swagger
