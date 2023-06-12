@@ -2,6 +2,7 @@
 SKU => Stock keeping Unit
 PLP => Product Listing Page
 ORM => Object Relational Mapping
+PDP => Product Description Page
 
 Q1) Describe various deploy modes in magento?
 
@@ -11,8 +12,8 @@ Ans) There are four possible deployment modes
 
 2) Developer mode: - It is used when you to change or enhance the functionality of the website.
 
-3) Production : - when your magneto site is in production, this option is activated. (When the complete deveopment of project is completed and is being 
-                   used for production)
+3) Production : - when your magneto site is in production, this option is activated. (When the complete deveopment of project is 
+                  completed and is being used for production)
 
 4) Maintence: - When you enable this mode, you will be unable to access the magento website while it is being updated or reconfigured.
 
@@ -25,8 +26,8 @@ Q2) What are magento magic methods?
 
 Ans)
 
-A magic method are special methods which are used to override PHP's default action when certain actions are performed an object. All methods starting 
-with __are reserved by behaviour.
+A magic method are special methods which are used to override PHP's default action when certain actions are performed an object. 
+All methods starting with __ are reserved by behaviour.
 
 1) __get()
 2) __set()
@@ -49,14 +50,14 @@ with __are reserved by behaviour.
 
 Q3) Explain breifly about EAV model?
 
-Ans) The EAV model (Entity, Attribute, Value) is also known as object-attribute-value or Open Schema Magento makes use of a database or a catalog 
-management system.
+Ans) The EAV model (Entity, Attribute, Value) is also known as object-attribute-value or Open Schema Magento makes use of a database or 
+a catalog management system.
 
-EAV in intended for databases in which a higher number of attributes are used to identify a single entity, but not all this attributes are relevant to
-that entity.
+EAV in intended for databases in which a higher number of attributes are used to identify a single entity, but not all this attributes 
+are relevant to that entity.
 
-When you use this model, only empty-data values are kept. Although this model all for more efficient storage, it is more complicated than the falt model 
-since developers must execute many queries to obtain all of the information about a product or item.
+When you use this model, only empty-data values are kept. Although this model all for more efficient storage, it is more complicated 
+than the falt model since developers must execute many queries to obtain all of the information about a product or item.
 
 Q4) What are the types of tables created when EAV model is built?
 
@@ -65,18 +66,18 @@ Ans) When you construct a new EAV module, six tables are created.
 1)Module
 2)Module_datetime
 3)Module_decimal
-4) Module_int
+4)Module_int
 5)Module_text
 6)Module_varchar
 
 Q5) Distinguish between EAV and flat model?
 
-Ans) The EAV databse model is completely normalized. Each column's values is stored in its data type database, making it more complicated beause they 
-must combine 5-6 tables even if only one detail is required. Columns are referred to as characteristics in EAV.
+Ans) The EAV database model is completely normalized. Each column's values is stored in its data type database, making it more 
+complicated beause they must combine 5-6 tables even if only one detail is required. Columns are referred to as characteristics in EAV.
 
-Only one table is used in the flat model. It isn't normalized, thus it keep extra space in the database. It's ideal for dynamic requirements in which 
-you need to add extra columns in the future. It's performance is quick beacuse it doesn't to join 5-6 tables. Columns are reffered to as fields in the
-flat model.
+Only one table is used in the flat model. It isn't normalized, thus it keep extra space in the database. It's ideal for dynamic 
+requirements in which you need to add extra columns in the future. It's performance is quick beacuse it doesn't to join 5-6 tables. 
+Columns are reffered to as fields in the flat model.
 
 Q6) What are some magento features?
 
@@ -115,8 +116,8 @@ Ans)
 
 Magento is one of the most popular e-commerce platforms avalibale.
 
-The major drawback of the magento is it needs exessive amount of storage and memory. It also necessitates object-oriented programming to avoid becoming 
-a complicated system. Furthermore, Magento has the potential to slow down and degrade the speed of your website. 
+The major drawback of the magento is it needs exessive amount of storage and memory. It also necessitates object-oriented programming to 
+avoid becoming a complicated system. Furthermore, Magento has the potential to slow down and degrade the speed of your website. 
 
 Q9)What are the different versions avalibale in magento?
 
@@ -172,9 +173,10 @@ Q13) What RMA stands for in magento?
 
 Ans)
 
-RMA stands for Return Merchandise Authorization. Which buyers to return, repair, or replace products they have previously purchased in exchange for a 
-refund or credit. Each store return policy will be different, but each will provide customers with thorough information regarding the valid time and 
-circumstances for returning items. As a result, RMA will follow the policy to help clients complete their requests effectively.
+RMA stands for Return Merchandise Authorization. Which buyers to return, repair, or replace products they have previously purchased in 
+exchange for a refund or credit. Each store return policy will be different, but each will provide customers with through information 
+regarding the valid time and circumstances for returning items. As a result, RMA will follow the policy to help clients complete their 
+requests effectively.
 
 Q14) Exaplin in breif virtual type magento?
 
