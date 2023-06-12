@@ -6,4 +6,9 @@
 5xx Server Error => The server takes the responsibility for these error status code.
 
    1xx Status Code [Informational]
-1. 100 continue An interim response. Indicates to the client that the initial part of the request has been received and has not been 
+1. 100 continue ==> An interim response. Indicates to the client that the initial part of the request has been received and has not yet been rejected by the server. The CLIENT SHOULD
+           continue by sending the remiander of the request or if the request has already been completed, ignore this reponse. The server MUST send a final response after the request
+           has been completed.
+2. 101 Switching Protocol ==> Sent in response to upgrade 
+           
+     
