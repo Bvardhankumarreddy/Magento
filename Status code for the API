@@ -1,1 +1,9 @@
 
+1xx Informational => Communicates transfer protocol-level informaion
+2xx Success     => Indicates that the client request was accepted successfully.
+3xx Redirection => Indicates that the client must take some additional action in order to complete their request.
+4xx Client Error => This category of error status codes points the finger at clients.
+5xx Server Error => The server takes the responsibility for these error status code.
+
+   1xx Status Code [Informational]
+1. 100 continue An interim response. Indicates to the client that the initial part of the request has been received and has not been 
